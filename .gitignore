@@ -1,3 +1,7 @@
 node_modules
 .svelte-kit
 build
+
+# Vercel: byggeresultat og lokal prosjektkobling. Genereres av CLI-en,
+# skal ikke i versjonskontroll.
+.vercel
