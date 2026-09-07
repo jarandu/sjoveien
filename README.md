@@ -20,6 +20,9 @@ før Vite bygger – begge stopper bygget ved feil.
 Prosjektet bruker `@sveltejs/adapter-vercel` og alle sider prerendres, så resultatet
 blir statiske filer på Vercels CDN. Ingen serverless-funksjoner i praksis, ingen env-variabler.
 
+Node-versjonen står i `engines` i package.json og styrer både Vercel-bygget og
+runtime. Adapteret leser den selv, så den skal ikke også settes i svelte.config.js.
+
 1. `git init && git add -A && git commit -m "Første versjon"`
 2. Push til et tomt GitHub-repo
 3. Vercel → Add New → Project → importer repoet
