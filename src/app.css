@@ -61,9 +61,9 @@
 
 	/* Bredde
 	 * Én felles bredde for alle sider, så rammen ikke hopper når du navigerer.
-	 * 52rem gir plass til 2x2 med emnekortene på forsiden, og er samtidig
-	 * smalt nok til at brødtekst ikke blir uleselig lange linjer. */
-	--spalte: 52rem;
+	 * 56rem gir plass til 2x2 emnekort på 420px, og er samtidig smalt nok
+	 * til at brødtekst ikke blir uleselig lange linjer. */
+	--spalte: 56rem;
 }
 
 *,

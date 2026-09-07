@@ -99,5 +99,6 @@ pensumpunkter dukker opp av seg selv når de får oppgaver. `/ov` tar
 `?emne=`, `?punkt=`, `?kategori=` og `?niva=` som filter.
 
 Alle sider deler samme bredde (`--spalte`), så rammen ikke hopper når du
-navigerer. Bredden er valgt slik at de fire emnekortene står 2x2 på
-forsiden, og oppgavesiden setter tegningen ved siden av svaralternativene.
+navigerer. Emnekortene står 2x2 og er kappet på 420px, slik at punktlistene
+holder lesbar linjelengde. Oppgavesiden setter tegningen ved siden av
+svaralternativene.

@@ -34,10 +34,10 @@
 
 	/**
 	 * Emnene har svært ulikt antall pensumpunkter – emne 1 har 17, emne 4 har 7.
-	 * Vi viser de første og legger resten bak en knapp, så kortene blir omtrent
-	 * like høye og hele rutenettet er lesbart uten å scrolle forbi et enkelt kort.
+	 * Vi viser de ni første, slik at emne 2, 3 og 4 vises i sin helhet, og bare
+	 * det lengste emnet får en «vis mer»-knapp.
 	 */
-	const SYNLIGE = 6;
+	const SYNLIGE = 9;
 	let utvidet = $state(new SvelteSet<number>());
 
 	function veksle(nr: Emne | number): void {
@@ -222,7 +222,10 @@
 	}
 	@media (min-width: 40rem) {
 		.kort {
-			grid-template-columns: 1fr 1fr;
+			/* Kortene stopper å vokse på 420px, så linjelengden i punktlistene
+			   holder seg lesbar. Rutenettet sentreres når det er plass til overs. */
+			grid-template-columns: repeat(2, minmax(0, 420px));
+			justify-content: center;
 		}
 	}
 	.kortet {
