@@ -59,8 +59,11 @@ Spørsmålene ligger i `src/lib/data/sporsmal.ts`, typet som `Sporsmal[]`. Hvert
 - alle spørsmål har kilde og kontrolldato
 - illustrasjonen som refereres faktisk finnes
 
-Den skriver også ut hvilke pensumpunkter som ennå ikke har oppgaver, og advarer om
-kilder uten lenke. Advarsler stopper ikke bygget; feil gjør det.
+Den skriver også ut dekningen på begge nivåer – pensumpunkter og underpunkter –
+og lister opp det som mangler oppgaver, i tillegg til å advare om kilder uten
+lenke. Advarsler stopper ikke bygget; feil gjør det.
+
+Banken dekker i dag alle 41 pensumpunkter og alle 77 underpunkter.
 
 Alle spørsmål er formulert fra regelverket. Ingenting er hentet fra Norsk Tests
 oppgavebank eller fra kursmateriell.

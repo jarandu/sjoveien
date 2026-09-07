@@ -34,6 +34,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'sm-001',
 		emne: 4,
 		pensumpunkt: '1.4.1',
+		underpunkt: 'Kardinal- og lateralsystemet',
 		kategori: 'sjomerker',
 		vanskelighet: 1,
 		sporsmal: 'Du ser dette sjømerket forut. På hvilken side av merket er det trygt å passere?',
@@ -54,6 +55,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'sm-002',
 		emne: 4,
 		pensumpunkt: '1.4.1',
+		underpunkt: 'Kardinal- og lateralsystemet',
 		kategori: 'sjomerker',
 		vanskelighet: 2,
 		sporsmal: 'Hvilket kardinalmerke er dette, og hvor skal du passere?',
@@ -74,6 +76,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'sm-003',
 		emne: 4,
 		pensumpunkt: '1.4.1',
+		underpunkt: 'Kardinal- og lateralsystemet',
 		kategori: 'sjomerker',
 		vanskelighet: 2,
 		sporsmal:
@@ -115,6 +118,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'sm-005',
 		emne: 4,
 		pensumpunkt: '1.4.1',
+		underpunkt: 'Spesialmerker',
 		kategori: 'sjomerker',
 		vanskelighet: 2,
 		sporsmal: 'Hva forteller dette merket deg?',
@@ -137,6 +141,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'la-001',
 		emne: 4,
 		pensumpunkt: '1.4.4',
+		underpunkt: 'Lanterneføring på fritidsbåt',
 		kategori: 'lanterner',
 		vanskelighet: 2,
 		sporsmal: 'Det er mørkt, og du ser dette lanternebildet. Hva ser du?',
@@ -160,6 +165,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'la-002',
 		emne: 4,
 		pensumpunkt: '1.4.4',
+		underpunkt: 'Lanterneføring på fritidsbåt',
 		kategori: 'lanterner',
 		vanskelighet: 2,
 		sporsmal: 'Du ser rødt og grønt sidelys, men ingen hvit topplanterne. Hva er dette?',
@@ -183,6 +189,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'la-003',
 		emne: 4,
 		pensumpunkt: '1.4.4',
+		underpunkt: 'Lanterneføring på fritidsbåt',
 		kategori: 'lanterner',
 		vanskelighet: 2,
 		sporsmal: 'Du nærmer deg et fartøy og ser bare ett hvitt lys, uten rødt eller grønt. Hva betyr det mest sannsynlig?',
@@ -206,6 +213,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'la-004',
 		emne: 2,
 		pensumpunkt: '1.2.b',
+		underpunkt: 'Signalflagg A – jeg har dykker nede',
 		kategori: 'lanterner',
 		vanskelighet: 1,
 		sporsmal: 'Du ser signalflagget A (blått og hvitt, med kløftet ytterkant) på et fartøy. Hva betyr det?',
@@ -228,6 +236,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'vi-001',
 		emne: 4,
 		pensumpunkt: '1.4.3',
+		underpunkt: 'To motorbåter har kryssende kurser',
 		kategori: 'vikeplikt',
 		vanskelighet: 1,
 		sporsmal: 'To motorbåter har kryssende kurser. Den andre båten kommer inn fra din styrbord side. Hva gjør du?',
@@ -251,6 +260,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'vi-002',
 		emne: 4,
 		pensumpunkt: '1.4.3',
+		underpunkt: 'To motorbåter har kryssende kurser',
 		kategori: 'vikeplikt',
 		vanskelighet: 2,
 		sporsmal: 'En motorbåt krysser kursen din fra babord side. Hva er riktig?',
@@ -274,6 +284,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'vi-003',
 		emne: 4,
 		pensumpunkt: '1.4.3',
+		underpunkt: 'To motorbåter har kryssende kurser',
 		kategori: 'vikeplikt',
 		vanskelighet: 1,
 		sporsmal: 'Du møter en motorbåt tilnærmet rett forut, på motsatt kurs. Hva gjør dere?',
@@ -317,6 +328,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'vi-005',
 		emne: 4,
 		pensumpunkt: '1.4.3',
+		underpunkt: 'Seil- og motorfartøy krysser ferge eller frakteskip i trangt farvann',
 		kategori: 'vikeplikt',
 		vanskelighet: 3,
 		sporsmal:
@@ -342,6 +354,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'vi-006',
 		emne: 2,
 		pensumpunkt: '1.2.a',
+		underpunkt: 'Vikeplikt for nyttetrafikk',
 		kategori: 'vikeplikt',
 		vanskelighet: 2,
 		sporsmal: 'Du går i en trang led. Hvor i leden skal du holde deg?',
@@ -364,6 +377,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'lo-001',
 		emne: 4,
 		pensumpunkt: '1.4.5',
+		underpunkt: 'Promillegrense for fritidsbåt opp til 15 meter',
 		kategori: 'lover',
 		vanskelighet: 1,
 		sporsmal: 'Hva er promillegrensen for den som fører en fritidsbåt under 15 meter?',
@@ -388,6 +402,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'lo-002',
 		emne: 4,
 		pensumpunkt: '1.4.5',
+		underpunkt: 'Regler for bruk av flyteutstyr',
 		kategori: 'lover',
 		vanskelighet: 2,
 		sporsmal: 'Når er det påbudt å bruke flyteutstyr i en fritidsbåt?',
@@ -412,6 +427,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'lo-003',
 		emne: 2,
 		pensumpunkt: '1.2.h',
+		underpunkt: 'Forskrift om minstealder og båtførerbevis',
 		kategori: 'lover',
 		vanskelighet: 1,
 		sporsmal: 'Hvem må ha båtførerbevis?',
@@ -436,6 +452,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'lo-004',
 		emne: 2,
 		pensumpunkt: '1.2.h',
+		underpunkt: 'Forskrift om minstealder og båtførerbevis',
 		kategori: 'lover',
 		vanskelighet: 2,
 		sporsmal: 'Du er 15 år. Hvilken båt har du lov til å føre?',
@@ -462,6 +479,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'no-001',
 		emne: 4,
 		pensumpunkt: '1.4.6',
+		underpunkt: 'SR-radio (VHF) kanal 16',
 		kategori: 'nodsituasjoner',
 		vanskelighet: 1,
 		sporsmal: 'Hvilken VHF-kanal er nød- og anropskanal?',
@@ -482,6 +500,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'no-002',
 		emne: 4,
 		pensumpunkt: '1.4.6',
+		underpunkt: 'Kystradiostasjonens nummer 120',
 		kategori: 'nodsituasjoner',
 		vanskelighet: 1,
 		sporsmal: 'Hvilket telefonnummer ringer du for å nå kystradioen i en nødsituasjon?',
@@ -647,6 +666,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'na-005',
 		emne: 3,
 		pensumpunkt: '1.3.e',
+		underpunkt: 'Apper på mobil og nettbrett',
 		kategori: 'navigasjon',
 		vanskelighet: 3,
 		sporsmal: 'Hva er den viktigste begrensningen ved å navigere med kartapp på mobilen?',
@@ -669,6 +689,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'sj-001',
 		emne: 1,
 		pensumpunkt: '1.1.a',
+		underpunkt: 'Dødmannsknapp',
 		kategori: 'sikkerhetsutstyr',
 		vanskelighet: 1,
 		sporsmal: 'Hva er hensikten med dødmannsknappen?',
@@ -689,6 +710,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'sj-002',
 		emne: 1,
 		pensumpunkt: '1.1.b',
+		underpunkt: 'Bensindamp',
 		kategori: 'brann',
 		vanskelighet: 2,
 		sporsmal: 'Hvorfor skal motorrommet luftes ut før du starter en bensinmotor?',
@@ -709,6 +731,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'sj-003',
 		emne: 1,
 		pensumpunkt: '1.1.m',
+		underpunkt: 'Nedkjøling (hypotermi)',
 		kategori: 'forstehjelp',
 		vanskelighet: 3,
 		sporsmal: 'Du har fått en sterkt nedkjølt person opp av sjøen. Hva er riktig?',
@@ -729,6 +752,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'sj-004',
 		emne: 1,
 		pensumpunkt: '1.1.f',
+		underpunkt: 'Konstruksjonskategorier (CE) for fritidsfartøy A, B, C, D',
 		kategori: 'sjomannskap',
 		vanskelighet: 3,
 		sporsmal: 'Hva forteller CE-konstruksjonskategori C deg om båten?',
@@ -749,6 +773,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'sj-005',
 		emne: 4,
 		pensumpunkt: '1.4.7',
+		underpunkt: 'Farer forbundet med høy fart',
 		kategori: 'sjomannskap',
 		vanskelighet: 2,
 		sporsmal: 'Hva er den største faren ved å kjøre fort i fritidsbåt?',
@@ -769,6 +794,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'sj-006',
 		emne: 1,
 		pensumpunkt: '1.1.n',
+		underpunkt: 'Sjøforhold',
 		kategori: 'vaer',
 		vanskelighet: 2,
 		sporsmal: 'Vindvarselet sier «liten kuling, 12 m/s». Hva bør du gjøre med en åpen 17-fots båt?',
@@ -789,6 +815,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'sj-007',
 		emne: 1,
 		pensumpunkt: '1.1.h',
+		underpunkt: 'Fribord, dypgående, stabilitet og lasteevne',
 		kategori: 'sjomannskap',
 		vanskelighet: 2,
 		sporsmal: 'Hva skjer med båten hvis du laster den for tungt?',
@@ -809,6 +836,7 @@ export const SPORSMAL: Sporsmal[] = [
 		id: 'sj-008',
 		emne: 1,
 		pensumpunkt: '1.1.q',
+		underpunkt: 'Sjøvettreglene',
 		kategori: 'sjomannskap',
 		vanskelighet: 1,
 		sporsmal: 'Hva sier sjøveisreglene om utkikk?',
@@ -1868,6 +1896,998 @@ export const SPORSMAL: Sporsmal[] = [
 		forklaring:
 			'Sol, vind, bevegelse og dehydrering gir det som ofte kalles sjøfyll – du blir mer påvirket enn du tror. Samtidig er marginene mindre: faller du i kaldt vann, svekker alkohol både svømmeevnen og kroppens evne til å holde på varmen.',
 		kilde: { verk: 'Småbåtloven', hjemmel: '§ 33', lenke: SMABATLOVEN },
+		kontrollert: '2026-09-07'
+	},
+	// ─── Sjømerker: faste merker og fyrsektorer ─────────────────────────────
+	{
+		id: 'sm-009',
+		emne: 4,
+		pensumpunkt: '1.4.1',
+		underpunkt: 'Stake eller båke med peker',
+		kategori: 'sjomerker',
+		vanskelighet: 2,
+		sporsmal: 'Du ser en stake med en peker (viser) på toppen. Hva forteller pekeren deg?',
+		illustrasjon: null,
+		alternativer: [
+			{ id: 'a', tekst: 'Pekeren peker mot trygt farvann – gå på den siden pekeren viser' },
+			{ id: 'b', tekst: 'Pekeren peker mot grunnen, så du skal gå motsatt vei' },
+			{ id: 'c', tekst: 'Pekeren viser retningen til nærmeste havn' },
+			{ id: 'd', tekst: 'Pekeren viser hvilken vei strømmen går' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Faste merker som staker og båker markerer småskjær og grunner, og viseren peker mot sikkert farvann. Husk at merket står på eller ved selve faren, så hold god klaring selv om du går på riktig side.',
+		kilde: { verk: 'IALA A / Kystverket', hjemmel: 'Faste merker med peker', lenke: KYSTVERKET_MERKER },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'ka-004',
+		emne: 4,
+		pensumpunkt: '1.4.2',
+		underpunkt: 'Sektor og karakterer på fyrlykter',
+		kategori: 'kartsymboler',
+		vanskelighet: 2,
+		sporsmal: 'Du ser den hvite sektoren fra en fyrlykt. Hva betyr det?',
+		illustrasjon: {
+			navn: 'kartsymbol',
+			props: { symbol: 'fyrsektor', tittel: 'Fyrlykt med sektorer' }
+		},
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'At du er i farbart farvann – men hvit sektor er ingen garanti hele veien, så følg med i kartet'
+			},
+			{ id: 'b', tekst: 'At du er i urent farvann og må snu' },
+			{ id: 'c', tekst: 'At du nærmer deg havn' },
+			{ id: 'd', tekst: 'At lykten er ute av drift' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Hvit sektor viser farbart farvann for de fartøyene som er forventet å trafikkere leia. Røde og grønne sektorer markerer urent farvann. Men Kystverket presiserer at det kan forekomme grunner i hvit sektor, og at sektoren ikke nødvendigvis er farbar i hele sin lengde – lykten erstatter ikke kartet.',
+		kilde: {
+			verk: 'Kystverket',
+			hjemmel: 'Fyrlykter og sektorer',
+			lenke: 'https://www.kystverket.no/sjovegen/fyr-lykter-og-sjomerker/fyrlykter/'
+		},
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'ka-005',
+		emne: 4,
+		pensumpunkt: '1.4.2',
+		underpunkt: 'Sektor og karakterer på fyrlykter',
+		kategori: 'kartsymboler',
+		vanskelighet: 3,
+		sporsmal: 'I kartet står det «Fl(3) 10s» ved en lykt. Hva betyr det?',
+		illustrasjon: null,
+		alternativer: [
+			{ id: 'a', tekst: 'Tre blink i gruppe, og hele mønsteret gjentar seg hvert tiende sekund' },
+			{ id: 'b', tekst: 'Tre blink i sekundet, i ti sekunder' },
+			{ id: 'c', tekst: 'Lykten lyser fast i ti sekunder mellom hvert blink' },
+			{ id: 'd', tekst: 'Lykten står ti meter over havet og har tre sektorer' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Fyrkarakteren beskriver blinkmønsteret. Fl er blink (flash), tallet i parentes er antall blink i gruppen, og sekundtallet er perioden – tiden før mønsteret gjentar seg. Ta tiden med klokke når du skal identifisere en lykt; det er mønsteret, ikke lysstyrken, som skiller lyktene fra hverandre.',
+		kilde: { verk: 'Kystverket', hjemmel: 'Norsk fyrliste – fyrkarakterer', lenke: 'https://www.kystverket.no/sjovegen/fyr-lykter-og-sjomerker/fyrlykter/' },
+		kontrollert: '2026-09-07'
+	},
+
+	// ─── Lanterner og flagg, forts. ─────────────────────────────────────────
+	{
+		id: 'la-009',
+		emne: 4,
+		pensumpunkt: '1.4.4',
+		underpunkt: 'Signalflagg A – jeg har dykker nede',
+		kategori: 'lanterner',
+		vanskelighet: 1,
+		sporsmal: 'Hvilken farge har signalflagget A?',
+		illustrasjon: null,
+		alternativer: [
+			{ id: 'a', tekst: 'Hvitt nærmest stangen og blått ytterst, med kløftet ytterkant' },
+			{ id: 'b', tekst: 'Helt rødt' },
+			{ id: 'c', tekst: 'Gult med svart kryss' },
+			{ id: 'd', tekst: 'Blått med hvit firkant i midten' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Flagg A er delt loddrett: hvitt mot stangen, blått ytterst, og ytterkanten er kløftet som en svalehale. Det betyr «jeg har dykker nede – hold godt klar og gå med liten fart». Lær deg formen, for den er lett å kjenne igjen på avstand.',
+		kilde: { verk: 'Sjøveisreglene', hjemmel: 'Regel 42', lenke: NORSKE_FARVANN },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'la-010',
+		emne: 2,
+		pensumpunkt: '1.2.b',
+		underpunkt: 'Lanterner på stor og liten motorbåt',
+		kategori: 'lanterner',
+		vanskelighet: 2,
+		sporsmal: 'Hvilke lanterner skal en motorbåt under 12 meter føre om natten?',
+		illustrasjon: {
+			navn: 'lanterne',
+			props: { fartoy: 'motorbat', sett: 'forfra', tittel: 'Motorbåt sett forfra' }
+		},
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Sidelanterner, akterlanterne og topplanterne – eventuelt en rundtlysende hvit lanterne i stedet for topp- og akterlanterne'
+			},
+			{ id: 'b', tekst: 'Bare en rundtlysende hvit lanterne' },
+			{ id: 'c', tekst: 'Bare sidelanterner' },
+			{ id: 'd', tekst: 'To hvite topplanterner over hverandre' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Et maskindrevet fartøy under 12 meter kan føre en rundtlysende hvit lanterne i stedet for topplanterne og akterlanterne, men sidelanternene må uansett være på plass. Uten sidelys kan andre ikke se hvilken vei du går.',
+		kilde: { verk: 'Sjøveisreglene', hjemmel: 'Regel 23', lenke: SJOVEISREGLENE },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'la-011',
+		emne: 2,
+		pensumpunkt: '1.2.b',
+		underpunkt: 'Lanterne og dagsignal for sleping',
+		kategori: 'lanterner',
+		vanskelighet: 3,
+		sporsmal: 'Du ser et fartøy med to hvite topplanterner over hverandre og en gul lanterne over akterlanternen. Hva driver det med?',
+		illustrasjon: null,
+		alternativer: [
+			{ id: 'a', tekst: 'Det sleper – den gule slepelanternen lyser akterover over akterlanternen' },
+			{ id: 'b', tekst: 'Det ligger til ankers' },
+			{ id: 'c', tekst: 'Det er manøvreringsudyktig' },
+			{ id: 'd', tekst: 'Det driver med fiske' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Et fartøy som sleper fører to topplanterner i loddrett rekke, og en gul slepelanterne over akterlanternen. Er slepet over 200 meter, blir det tre topplanterner. Hold godt unna – slepewiren ligger ofte like under overflaten mellom fartøyene.',
+		kilde: { verk: 'Sjøveisreglene', hjemmel: 'Regel 24', lenke: SJOVEISREGLENE },
+		kontrollert: '2026-09-07'
+	},
+
+	// ─── Sikkerhetsutstyr, forts. ───────────────────────────────────────────
+	{
+		id: 'si-007',
+		emne: 1,
+		pensumpunkt: '1.1.a',
+		underpunkt: 'Flyteutstyr',
+		kategori: 'sikkerhetsutstyr',
+		vanskelighet: 2,
+		sporsmal: 'Hva er forskjellen på en redningsvest og en flytevest?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'En redningsvest snur en bevisstløs person med ansiktet opp; en flytevest holder deg flytende, men krever at du er ved bevissthet'
+			},
+			{ id: 'b', tekst: 'Ingen forskjell – det er to ord for det samme' },
+			{ id: 'c', tekst: 'Flytevesten har høyere oppdrift enn redningsvesten' },
+			{ id: 'd', tekst: 'Redningsvesten er bare for barn' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Redningsvest har krage og nok oppdrift til å vende en bevisstløs person på rygg med ansiktet over vann. Flytevest gir oppdrift, men snur deg ikke. På åpent farvann og i dårlig vær er redningsvest det trygge valget.',
+		kilde: { verk: 'Pensum til båtførerprøven', hjemmel: 'Punkt 1.1.a', lenke: SDIR_BEVIS },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'si-008',
+		emne: 1,
+		pensumpunkt: '1.1.a',
+		underpunkt: 'Nødraketter, bluss og annen nødsignalisering',
+		kategori: 'nodsituasjoner',
+		vanskelighet: 2,
+		sporsmal: 'Når bør du avfyre et rødt fallskjermlys?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Når du vet eller har grunn til å tro at noen kan se det – ikke fyr av alle med en gang'
+			},
+			{ id: 'b', tekst: 'Med en gang du får problemer, uansett om noen er i nærheten' },
+			{ id: 'c', tekst: 'Bare på dagtid' },
+			{ id: 'd', tekst: 'Alle samtidig, for å bli lettere å se' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Pyroteknikk er en begrenset ressurs. Spar signalene til du ser eller hører et fartøy eller fly, eller vet at det leter etter deg. Rødt fallskjermlys sees lengst, håndbluss brukes når redningsenheten er nær og skal finne deg nøyaktig. Sjekk utløpsdatoen før sesongen.',
+		kilde: { verk: 'Pensum til båtførerprøven', hjemmel: 'Punkt 1.1.a', lenke: SDIR_BEVIS },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'si-009',
+		emne: 1,
+		pensumpunkt: '1.1.c',
+		underpunkt: 'VHF kanal 16 og DSC',
+		kategori: 'nodsituasjoner',
+		vanskelighet: 2,
+		sporsmal: 'Hva gjør DSC-knappen på en VHF?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Sender en digital nødalarm med båtens identitet, og posisjon hvis GPS er koblet til'
+			},
+			{ id: 'b', tekst: 'Skrur opp volumet på kanal 16' },
+			{ id: 'c', tekst: 'Ringer 113 over mobilnettet' },
+			{ id: 'd', tekst: 'Slår av alle andre kanaler' }
+		],
+		riktig: 'a',
+		forklaring:
+			'DSC (Digital Selective Calling) sender et digitalt nødanrop på kanal 70 med MMSI-nummeret ditt, og posisjon dersom radioen har GPS. Kystradioen og andre fartøy varsles automatisk. Følg alltid opp med et vanlig taleanrop på kanal 16.',
+		kilde: { verk: 'Pensum til båtførerprøven', hjemmel: 'Punkt 1.1.c', lenke: SDIR_BEVIS },
+		kontrollert: '2026-09-07'
+	},
+
+	// ─── Fart, holdninger og førstehjelp ────────────────────────────────────
+	{
+		id: 'sj-016',
+		emne: 1,
+		pensumpunkt: '1.1.p',
+		underpunkt: 'Forsvarlig avstand til land',
+		kategori: 'sjomannskap',
+		vanskelighet: 2,
+		sporsmal: 'Hvorfor bør du holde god avstand til land når du kjører fort?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Fordi marginene blir minimale: skjær, badende og småbåter dukker opp uten forvarsel, og bølgene dine treffer land og fortøyde båter'
+			},
+			{ id: 'b', tekst: 'Fordi kompasset påvirkes nær land' },
+			{ id: 'c', tekst: 'Fordi det er forbudt å kjøre nærmere enn 500 meter fra land' },
+			{ id: 'd', tekst: 'Fordi motoren går varmere nær land' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Nær land er det grunt, trangt og full av folk. I høy fart rekker du verken å se eller reagere, og hekkbølgen din kan velte småbåter og skade fortøyde båter. Du er ansvarlig for skade bølgene dine forårsaker.',
+		kilde: { verk: 'Pensum til båtførerprøven', hjemmel: 'Punkt 1.1.p', lenke: SDIR_BEVIS },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'sj-017',
+		emne: 1,
+		pensumpunkt: '1.1.q',
+		underpunkt: 'Egen adferds betydning for andres sikkerhet og trivsel',
+		kategori: 'sjomannskap',
+		vanskelighet: 1,
+		sporsmal: 'Du passerer en robåt og en kajakk i en trang vik. Hva er godt sjømannskap?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Sette ned farten i god tid, slik at hekkbølgen blir minst mulig, og gi god klaring'
+			},
+			{ id: 'b', tekst: 'Holde farten, men styre rett forbi' },
+			{ id: 'c', tekst: 'Øke farten for å komme raskt forbi' },
+			{ id: 'd', tekst: 'Gi lydsignal og holde kursen' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Små, lave fartøyer kantrer lett i bølger og har ingen motor å komme seg unna med. Å senke farten i god tid – ikke først når du er på siden av dem – gjør at bølgen legger seg før du passerer. Din egen oppførsel avgjør andres sikkerhet og trivsel på sjøen.',
+		kilde: { verk: 'Pensum til båtførerprøven', hjemmel: 'Punkt 1.1.q', lenke: SDIR_BEVIS },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'fo-003',
+		emne: 1,
+		pensumpunkt: '1.1.m',
+		underpunkt: 'Behandling av indre og ytre blødninger',
+		kategori: 'forstehjelp',
+		vanskelighet: 2,
+		sporsmal: 'Noen om bord har fått et dypt kutt som blør kraftig. Hva gjør du først?',
+		illustrasjon: null,
+		alternativer: [
+			{ id: 'a', tekst: 'Legger direkte trykk på såret og holder trykket, og hever om mulig skadestedet' },
+			{ id: 'b', tekst: 'Skyller såret grundig i sjøvann først' },
+			{ id: 'c', tekst: 'Legger på en løs kompress og venter på hjelp' },
+			{ id: 'd', tekst: 'Setter på strikk ovenfor såret med en gang' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Kraftig ytre blødning stanses med direkte, vedvarende trykk på såret. Slipp ikke opp for å kikke. Hev skadestedet hvis det er mulig, og hold pasienten varm. Varsle på kanal 16 eller 120 – blodtap gir raskt sjokk, og i båt er du langt fra hjelp.',
+		kilde: { verk: 'Pensum til båtførerprøven', hjemmel: 'Punkt 1.1.m', lenke: SDIR_BEVIS },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'lo-007',
+		emne: 2,
+		pensumpunkt: '1.2.h',
+		underpunkt: 'Forskrift om begrenset fart ved passering av badende',
+		kategori: 'lover',
+		vanskelighet: 2,
+		sporsmal: 'Hva gjelder ved oppmerkede badeområder?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Det er forbudt å ferdes og ankre innenfor blåsene, og du må ned i 5 knop nærmere enn 50 meter fra badende'
+			},
+			{ id: 'b', tekst: 'Du kan passere gjennom området i inntil 5 knop' },
+			{ id: 'c', tekst: 'Reglene gjelder bare i juli' },
+			{ id: 'd', tekst: 'Det er ingen egne regler for badeområder' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Motor- og seilfartøy har forbud mot ferdsel og ankring innenfor blåsene som markerer et offentlig badeområde. I tillegg gjelder den generelle regelen om høyst 5 knop nærmere enn 50 meter fra steder der bading pågår. Folk i vannet er nesten usynlige fra en båt.',
+		kilde: { verk: 'Forskrift om fartsgrenser på sjøen', hjemmel: '§ 3', lenke: FARTSGRENSER },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'vi-011',
+		emne: 2,
+		pensumpunkt: '1.2.a',
+		underpunkt: 'Trafikkseparasjonssystem',
+		kategori: 'vikeplikt',
+		vanskelighet: 3,
+		sporsmal: 'Du må krysse et trafikkseparasjonssystem med fritidsbåt. Hvordan gjør du det?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Så nær rett vinkel på trafikkretningen som mulig, og uten å hindre fartøy som følger systemet'
+			},
+			{ id: 'b', tekst: 'På skrå, slik at du bruker kortest mulig tid i feltet' },
+			{ id: 'c', tekst: 'Ved å følge trafikkretningen til du er over' },
+			{ id: 'd', tekst: 'Fritidsbåter kan ikke krysse i det hele tatt' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Kryssing skal skje så nær rett vinkel på trafikkretningen som praktisk mulig, slik at du er kortest mulig i feltet og er lett å tolke for de store. Fartøy under 20 meter og seilfartøy skal ikke hindre maskindrevne fartøy som følger trafikkfeltet.',
+		kilde: { verk: 'Sjøveisreglene', hjemmel: 'Regel 10', lenke: SJOVEISREGLENE },
+		kontrollert: '2026-09-07'
+	},
+
+	// ─── Emne 3: seilasregler ved sjømerker (pensumpunkt 1.3.a) ─────────────
+	{
+		id: 'na-010',
+		emne: 3,
+		pensumpunkt: '1.3.a',
+		underpunkt: 'Kardinalmerker',
+		kategori: 'sjomerker',
+		vanskelighet: 2,
+		sporsmal: 'Hva er hovedforskjellen på et kardinalmerke og et lateralmerke?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Kardinalmerket viser i hvilken himmelretning du finner trygt vann; lateralmerket viser hvilken side av leia du skal holde deg på'
+			},
+			{ id: 'b', tekst: 'Kardinalmerker står bare i innseilinger, lateralmerker bare på åpent hav' },
+			{ id: 'c', tekst: 'Kardinalmerker er alltid lysende, lateralmerker aldri' },
+			{ id: 'd', tekst: 'Det er ingen praktisk forskjell' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Kardinalmerker er absolutte: gult og svart forteller at trygt vann ligger nord, øst, sør eller vest for merket, uansett hvilken vei du kommer fra. Lateralmerker er relative: rødt og grønt gir bare mening når du vet hvilken vei merkingens hovedretning går.',
+		kilde: { verk: 'IALA A / Kystverket', hjemmel: 'IALA A-systemet', lenke: KYSTVERKET_MERKER },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'na-011',
+		emne: 3,
+		pensumpunkt: '1.3.a',
+		underpunkt: 'Lateralmerker',
+		kategori: 'sjomerker',
+		vanskelighet: 3,
+		sporsmal: 'Du går ut leia, altså motsatt vei av merkingens hovedretning. Hvordan skal du forholde deg til lateralmerkene?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Omvendt: nå skal de røde merkene ligge på styrbord side og de grønne på babord'
+			},
+			{ id: 'b', tekst: 'Likt som innover – rødt på babord' },
+			{ id: 'c', tekst: 'Lateralmerker gjelder bare innover leia og kan ignoreres på vei ut' },
+			{ id: 'd', tekst: 'Du skal alltid holde deg midt mellom merkene' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Lateralmerkene er definert ut fra merkingens hovedretning, som langs norskekysten i hovedsak går nordover og innover fjordene. Går du motsatt vei, snur alt: rødt skal da ligge på styrbord. Derfor må du alltid vite hvilken vei hovedretningen går i det området du er.',
+		kilde: { verk: 'IALA A / Kystverket', hjemmel: 'Lateralsystemet', lenke: KYSTVERKET_MERKER },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'na-012',
+		emne: 3,
+		pensumpunkt: '1.3.a',
+		underpunkt: 'Frittliggende fare',
+		kategori: 'sjomerker',
+		vanskelighet: 2,
+		sporsmal: 'Hva skiller et merke for frittliggende fare fra et senterleiemerke?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Frittliggende fare står på selve faren og skal gis klaring; senterleiemerket står i trygt vann og kan passeres på begge sider'
+			},
+			{ id: 'b', tekst: 'De betyr det samme, men brukes i ulike deler av landet' },
+			{ id: 'c', tekst: 'Senterleiemerket markerer en grunne' },
+			{ id: 'd', tekst: 'Frittliggende fare kan bare passeres på nordsiden' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Begge har rødt i seg, og det er lett å blande dem. Frittliggende fare er svart med rødt bånd og to svarte kuler, og står på eller like ved faren – hold klaring. Senterleiemerket har røde og hvite loddrette striper og én rød kule, og markerer trygt farvann, typisk midt i en innseiling.',
+		kilde: { verk: 'IALA A / Kystverket', hjemmel: 'IALA A-systemet', lenke: KYSTVERKET_MERKER },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'na-013',
+		emne: 3,
+		pensumpunkt: '1.3.a',
+		underpunkt: 'Spesialmerker',
+		kategori: 'sjomerker',
+		vanskelighet: 2,
+		sporsmal: 'Hvorfor er et gult spesialmerke ikke et navigasjonsmerke i vanlig forstand?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Fordi det markerer et område med særskilt betydning, ikke hvor det er trygt å seile'
+			},
+			{ id: 'b', tekst: 'Fordi det bare står i ferskvann' },
+			{ id: 'c', tekst: 'Fordi det alltid kan ignoreres' },
+			{ id: 'd', tekst: 'Fordi det bare gjelder for yrkesfartøy' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Gult merke med gult kryss markerer kabler, rørledninger, oppdrett, badeområder, skytefelt og lignende. Det sier ingenting om dybde eller hvilken side du skal passere – men det kan følge restriksjoner med området, for eksempel ankringsforbud over kabel.',
+		kilde: { verk: 'IALA A / Kystverket', hjemmel: 'Spesialmerke', lenke: KYSTVERKET_MERKER },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'na-014',
+		emne: 3,
+		pensumpunkt: '1.3.a',
+		underpunkt: 'Senterleiemerke',
+		kategori: 'sjomerker',
+		vanskelighet: 3,
+		sporsmal: 'Du ser et senterleiemerke rett forut på vei inn mot en havn. Hva gjør du?',
+		illustrasjon: {
+			navn: 'sjomerke',
+			props: { merke: 'senterleie', tittel: 'Senterleiemerke' }
+		},
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Passerer på den siden som passer kursen din – det er trygt farvann rundt merket'
+			},
+			{ id: 'b', tekst: 'Holder merket på babord side' },
+			{ id: 'c', tekst: 'Snur, fordi merket varsler om en fare' },
+			{ id: 'd', tekst: 'Passerer nord for merket' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Senterleiemerket, også kalt midtfarvannsmerke, står der det er trygt vann rundt – ofte i innseilingen eller ved starten av en led. Det kan passeres på begge sider. I praksis holder de fleste styrbord om merket, slik at møtende trafikk får plass.',
+		kilde: { verk: 'IALA A / Kystverket', hjemmel: 'Senterleiemerke', lenke: KYSTVERKET_MERKER },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'vi-012',
+		emne: 4,
+		pensumpunkt: '1.4.3',
+		underpunkt: 'Sjøveisregel 43 og 44',
+		kategori: 'vikeplikt',
+		vanskelighet: 3,
+		sporsmal: 'Hva krever regel 43 av små fartøy som nærmer seg annen trafikk?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Å manøvrere med forsiktighet, gå med redusert fart, om nødvendig stoppe, og holde godt av veien'
+			},
+			{ id: 'b', tekst: 'Å gi tre korte støt og holde kursen' },
+			{ id: 'c', tekst: 'Å øke farten for å komme klar' },
+			{ id: 'd', tekst: 'Ingenting – regel 43 gjelder bare fartøy over 20 meter' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Regel 43 pålegger små fartøy – robåter, småbåter og seilbåter som bare fører hvite lys – å opptre forsiktig, sette ned farten, om nødvendig stoppe, og holde godt av veien. Regel 44 er den beslektede: lystfartøy og åpne båter skal mest mulig holde av veien for større fartøy, ferger og nyttetrafikk.',
+		kilde: { verk: 'Sjøveisreglene', hjemmel: 'Regel 43 og 44', lenke: NORSKE_FARVANN },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'vi-013',
+		emne: 2,
+		pensumpunkt: '1.2.a',
+		underpunkt: 'Vikeplikt mellom motorbåter',
+		kategori: 'vikeplikt',
+		vanskelighet: 2,
+		sporsmal: 'To maskindrevne fartøy møtes. Hvilken av disse situasjonene gir IKKE gjensidig plikt til å dreie til styrbord?',
+		illustrasjon: null,
+		alternativer: [
+			{ id: 'a', tekst: 'Når det ene fartøyet innhenter det andre bakfra' },
+			{ id: 'b', tekst: 'Når de møtes tilnærmet rett forut på motsatte kurser' },
+			{ id: 'c', tekst: 'Når de møtes rødt lys mot rødt lys' },
+			{ id: 'd', tekst: 'Når de går rett mot hverandre i en trang led' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Ved møtende kurser skal begge dreie til styrbord. Ved innhenting gjelder en annen regel: den innhentende skal holde av veien, og den innhentede skal holde kurs og fart. Innhentingsregelen går foran de andre vikepliktsreglene.',
+		kilde: { verk: 'Sjøveisreglene', hjemmel: 'Regel 13 og regel 14', lenke: SJOVEISREGLENE },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'vi-014',
+		emne: 2,
+		pensumpunkt: '1.2.a',
+		underpunkt: 'Vikeplikt mellom motorbåt og seilbåt',
+		kategori: 'vikeplikt',
+		vanskelighet: 3,
+		sporsmal: 'I hvilket tilfelle skal en seilbåt holde av veien for en motorbåt?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Når seilbåten innhenter motorbåten, eller når motorbåten er begrenset av sin dypgående i en trang lei'
+			},
+			{ id: 'b', tekst: 'Aldri – seilbåt har alltid forkjørsrett' },
+			{ id: 'c', tekst: 'Bare når seilbåten er over 12 meter' },
+			{ id: 'd', tekst: 'Bare om natten' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Hovedregelen er at maskindrevet fartøy viker for seilfartøy, men den har unntak. Innhentingsregelen går foran, så en seilbåt som tar igjen en motorbåt skal vike. I tillegg skal fartøy under 20 meter og seilfartøy ikke hindre fartøy som bare kan navigere trygt innenfor en trang lei.',
+		kilde: { verk: 'Sjøveisreglene', hjemmel: 'Regel 9, 13 og 18', lenke: SJOVEISREGLENE },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'na-015',
+		emne: 3,
+		pensumpunkt: '1.3.e',
+		underpunkt: 'GPS',
+		kategori: 'navigasjon',
+		vanskelighet: 2,
+		sporsmal: 'Hva forteller GPS-en deg egentlig?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Hvor du er – ikke om det er trygt der. Dybder og farer må du lese i kartet'
+			},
+			{ id: 'b', tekst: 'Både posisjon og om det er dypt nok der du er' },
+			{ id: 'c', tekst: 'Hvilken kurs du har vikeplikt for' },
+			{ id: 'd', tekst: 'Nøyaktig posisjon også når antennen er dekket til' }
+		],
+		riktig: 'a',
+		forklaring:
+			'GPS gir posisjon, fart over grunn og kurs over grunn. Den vet ingenting om skjær, strøm eller trafikk. Posisjonen er dessuten bare like nyttig som kartet den vises i – er kartdatumet eller sjømålingene gamle, kan en riktig posisjon likevel se feil ut i kartet.',
+		kilde: { verk: 'Pensum til båtførerprøven', hjemmel: 'Punkt 1.3.e', lenke: SDIR_BEVIS },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'na-016',
+		emne: 3,
+		pensumpunkt: '1.3.e',
+		underpunkt: 'Elektroniske kart',
+		kategori: 'navigasjon',
+		vanskelighet: 3,
+		sporsmal: 'Hva er en typisk fallgruve ved elektroniske kart på plotter?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'At du zoomer så langt inn eller ut at viktige detaljer ikke vises, og at kartdataene kan være utdaterte'
+			},
+			{ id: 'b', tekst: 'At de aldri viser dybder' },
+			{ id: 'c', tekst: 'At de bare virker med mobildekning' },
+			{ id: 'd', tekst: 'At de ikke kan vise egen posisjon' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Zoomnivået avgjør hva som tegnes opp: zoomer du for langt ut, forsvinner staker og grunner fra skjermen selv om de er der. Kartdata må også oppdateres – nye grunner og flyttede merker kommer ikke av seg selv. Sjekk alltid mot papirkart eller offisielle kartdata når du planlegger en tur i ukjent farvann.',
+		kilde: { verk: 'Pensum til båtførerprøven', hjemmel: 'Punkt 1.3.e', lenke: SDIR_BEVIS },
+		kontrollert: '2026-09-07'
+	},
+
+	// ─── Siste dekning: utstyr, fart, holdninger og lovverk ─────────────────
+	{
+		id: 'si-010',
+		emne: 1,
+		pensumpunkt: '1.1.a',
+		underpunkt: 'Lydsignalapparat',
+		kategori: 'sikkerhetsutstyr',
+		vanskelighet: 2,
+		sporsmal: 'Hvorfor bør du ha et lydsignalapparat om bord, selv i en liten båt?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'For å kunne gi manøver- og varselsignal, og for å gjøre deg hørt i tåke eller når noen ikke ser deg'
+			},
+			{ id: 'b', tekst: 'Fordi det erstatter lanternene om natten' },
+			{ id: 'c', tekst: 'Fordi det kreves for å få båtførerbevis' },
+			{ id: 'd', tekst: 'For å skremme bort fugl fra båten' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Sjøveisreglene bygger på at fartøy kan gi lydsignaler – både manøversignaler, tåkesignaler og ikke minst tvilsignalet på fem korte støt. En billig tåkelur eller signalhorn er ofte det eneste som når fram når en større båt ikke har sett deg.',
+		kilde: { verk: 'Pensum til båtførerprøven', hjemmel: 'Punkt 1.1.a', lenke: SDIR_BEVIS },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'si-011',
+		emne: 1,
+		pensumpunkt: '1.1.a',
+		underpunkt: 'Fastmonterte slukkeanlegg (motorrom)',
+		kategori: 'brann',
+		vanskelighet: 3,
+		sporsmal: 'Det begynner å brenne i motorrommet, og båten har fastmontert slukkeanlegg. Hva er viktigst?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Å stoppe motoren og la luken være lukket, slik at slukkemiddelet får virke uten at ny luft slipper inn'
+			},
+			{ id: 'b', tekst: 'Å åpne luken straks for å se hvor det brenner' },
+			{ id: 'c', tekst: 'Å øke turtallet så vifta blåser ut røyken' },
+			{ id: 'd', tekst: 'Å helle sjøvann ned i motorrommet' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Et fastmontert anlegg fyller motorrommet med slukkemiddel og kveler brannen. Åpner du luken, slipper du inn oksygen og brannen blusser opp igjen – og du risikerer en stikkflamme i ansiktet. Stopp motoren, hold luken lukket, og vær klar til å forlate båten.',
+		kilde: { verk: 'Sjøfartsdirektoratet', hjemmel: 'Forebygging av båtbrann', lenke: SDIR_BRANN },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'si-012',
+		emne: 1,
+		pensumpunkt: '1.1.b',
+		underpunkt: 'Betydning av oksygen',
+		kategori: 'brann',
+		vanskelighet: 2,
+		sporsmal: 'Hva er de tre tingene en brann trenger for å brenne?',
+		illustrasjon: null,
+		alternativer: [
+			{ id: 'a', tekst: 'Brennbart materiale, oksygen og varme' },
+			{ id: 'b', tekst: 'Bensin, gnist og vind' },
+			{ id: 'c', tekst: 'Varme, røyk og trykk' },
+			{ id: 'd', tekst: 'Oksygen, vann og elektrisitet' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Branntrekanten er brennbart materiale, oksygen og varme. Fjerner du én av dem, slokner brannen. Derfor virker et brannteppe – det stenger ute oksygenet – og derfor skal du ikke åpne en luke inn til en brann og slippe inn ny luft.',
+		kilde: { verk: 'Sjøfartsdirektoratet', hjemmel: 'Forebygging av båtbrann', lenke: SDIR_BRANN },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'si-013',
+		emne: 1,
+		pensumpunkt: '1.1.c',
+		underpunkt: 'Kystradiostasjonenes telefonnummer: 120',
+		kategori: 'nodsituasjoner',
+		vanskelighet: 2,
+		sporsmal: 'Du har ikke VHF om bord, men mobildekning. Hvem ringer du ved fare på sjøen?',
+		illustrasjon: null,
+		alternativer: [
+			{ id: 'a', tekst: 'Kystradioen på 120, som koordinerer sjøredningen' },
+			{ id: 'b', tekst: '110, som er brann' },
+			{ id: 'c', tekst: 'Nærmeste havnekontor' },
+			{ id: 'd', tekst: 'Forsikringsselskapet' }
+		],
+		riktig: 'a',
+		forklaring:
+			'120 går til kystradioen, som har direkte linje til hovedredningssentralene og kan varsle redningsskøyte, helikopter og fartøy i nærheten. 113 fungerer også, men kystradioen er spesialisert på sjø. Husk at mobilen bare når én mottaker – VHF når alle båter rundt deg.',
+		kilde: { verk: 'Pensum til båtførerprøven', hjemmel: 'Punkt 1.1.c', lenke: SDIR_BEVIS },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'sj-018',
+		emne: 1,
+		pensumpunkt: '1.1.i',
+		underpunkt: 'Drivstoffsystem, kjøleoljesystem',
+		kategori: 'brann',
+		vanskelighet: 2,
+		sporsmal: 'Hva bør du sjekke jevnlig i drivstoffsystemet?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Slanger, klemmer og koblinger for lekkasje og sprekker, og vann eller smuss i filteret'
+			},
+			{ id: 'b', tekst: 'Bare at det er drivstoff på tanken' },
+			{ id: 'c', tekst: 'Oktantallet på bensinen' },
+			{ id: 'd', tekst: 'Fargen på tanken' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Slanger tørker ut og sprekker, klemmer ruster, og kondens gir vann i tanken. En drivstofflekkasje i motorrommet er både den vanligste årsaken til båtbrann og til motorstopp i verst tenkelige øyeblikk. Sjekk før sesongen og se etter fukt og lukt underveis.',
+		kilde: { verk: 'Pensum til båtførerprøven', hjemmel: 'Punkt 1.1.i', lenke: SDIR_BEVIS },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'fo-004',
+		emne: 1,
+		pensumpunkt: '1.1.m',
+		underpunkt: 'Skader etter kollisjon eller fall i høy fart',
+		kategori: 'forstehjelp',
+		vanskelighet: 3,
+		sporsmal: 'Etter en kollisjon i høy fart er en person tilsynelatende uskadd, men klager over vondt i nakken. Hva gjør du?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Holder personen mest mulig i ro, støtter nakken og varsler hjelp – indre skader kan komme til syne først etter en stund'
+			},
+			{ id: 'b', tekst: 'Ber personen bevege på nakken for å sjekke om noe er brukket' },
+			{ id: 'c', tekst: 'Lar personen legge seg og sover det av' },
+			{ id: 'd', tekst: 'Gir smertestillende og fortsetter turen' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Høyenergiskader gir ofte skjulte skader i nakke, rygg og indre organer. Symptomene kan komme gradvis. Hold personen i ro, støtt hode og nakke, hindre nedkjøling og få profesjonell vurdering. Å teste bevegelighet i en mulig nakkeskade kan gjøre skaden verre.',
+		kilde: { verk: 'Pensum til båtførerprøven', hjemmel: 'Punkt 1.1.m', lenke: SDIR_BEVIS },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'sj-019',
+		emne: 1,
+		pensumpunkt: '1.1.p',
+		underpunkt: 'Innsnevret syn, tunnelsyn',
+		kategori: 'sjomannskap',
+		vanskelighet: 2,
+		sporsmal: 'Hva skjer med synet ditt når farten øker?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Synsfeltet snevres inn – du ser stadig mindre til sidene og oppdager ting senere'
+			},
+			{ id: 'b', tekst: 'Synsfeltet blir bredere fordi du er mer årvåken' },
+			{ id: 'c', tekst: 'Fargesynet blir bedre' },
+			{ id: 'd', tekst: 'Farten påvirker ikke synet' }
+		],
+		riktig: 'a',
+		forklaring:
+			'I høy fart konsentreres blikket framover, og sidesynet svekkes – det kalles tunnelsyn. Du ser altså mindre akkurat når du har minst tid til å reagere. Kombinert med at plotteren henger etter, er dette hovedgrunnen til at fart er farlig i trangt farvann.',
+		kilde: { verk: 'Pensum til båtførerprøven', hjemmel: 'Punkt 1.1.p', lenke: SDIR_BEVIS },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'sj-020',
+		emne: 1,
+		pensumpunkt: '1.1.p',
+		underpunkt: 'Høyhastighetsnavigasjon',
+		kategori: 'sjomannskap',
+		vanskelighet: 3,
+		sporsmal: 'Hva kjennetegner forsvarlig navigasjon i høy fart?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'At ruten er planlagt på forhånd, at du kjenner farvannet, og at farten settes ned der sikt eller trafikk krever det'
+			},
+			{ id: 'b', tekst: 'At du følger plotteren tett og justerer kursen fortløpende' },
+			{ id: 'c', tekst: 'At du holder samme fart hele veien for å spare drivstoff' },
+			{ id: 'd', tekst: 'At du kjører nær land for å ha kort vei inn' }
+		],
+		riktig: 'a',
+		forklaring:
+			'I høy fart rekker du ikke å navigere underveis – avgjørelsene må være tatt før du starter. Planlegg ruten, kjenn farene, ha en utkikk til, og sett ned farten ved dårlig sikt, i trange sund og der det er folk. Fart krever mer forberedelse, ikke mindre.',
+		kilde: { verk: 'Pensum til båtførerprøven', hjemmel: 'Punkt 1.1.p', lenke: SDIR_BEVIS },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'sj-021',
+		emne: 1,
+		pensumpunkt: '1.1.p',
+		underpunkt: 'Risiko og konsekvenser',
+		kategori: 'sjomannskap',
+		vanskelighet: 2,
+		sporsmal: 'Hvorfor får en grunnstøting i høy fart så mye større konsekvenser enn i lav fart?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Fordi bevegelsesenergien øker kraftig med farten, så både skadene på båten og på de om bord blir mye større'
+			},
+			{ id: 'b', tekst: 'Fordi motoren stopper raskere' },
+			{ id: 'c', tekst: 'Fordi båten synker saktere' },
+			{ id: 'd', tekst: 'Det er ingen vesentlig forskjell' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Bevegelsesenergien vokser med kvadratet av farten: dobler du farten, firedobles energien som må tas opp i sammenstøtet. Derfor blir en berøring i sakte fart en skramme, mens den samme grunnen i planingsfart kan knuse skroget og kaste folk ut av båten.',
+		kilde: { verk: 'Pensum til båtførerprøven', hjemmel: 'Punkt 1.1.p', lenke: SDIR_BEVIS },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'sj-022',
+		emne: 1,
+		pensumpunkt: '1.1.q',
+		underpunkt: 'Holdninger til sjøs og respekt for andre brukere av farvannet',
+		kategori: 'sjomannskap',
+		vanskelighet: 2,
+		sporsmal: 'Du har formelt sett retten på din side, men den andre båten viker ikke. Hva er riktig holdning?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Å manøvrere selv for å unngå sammenstøt – å ha rett er ingen unnskyldning for en kollisjon'
+			},
+			{ id: 'b', tekst: 'Å holde kurs og fart uansett, siden han har vikeplikt' },
+			{ id: 'c', tekst: 'Å øke farten for å komme forbi først' },
+			{ id: 'd', tekst: 'Å gå så nær som mulig for å markere at han tar feil' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Sjøveisreglene krever at du gjør alt som trengs for å unngå sammenstøt, også når den andre er den som svikter. Plikten til å holde kurs opphører når det er klart at den andre ikke gjør sitt. God sjømannskap handler om å komme trygt fram, ikke om å få rett.',
+		kilde: { verk: 'Sjøveisreglene', hjemmel: 'Regel 2 og regel 17', lenke: SJOVEISREGLENE },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'lo-008',
+		emne: 2,
+		pensumpunkt: '1.2.h',
+		underpunkt: 'Småbåtloven §§ 21, 22, 23, 27, 32, 33, 35 og kapittel 5',
+		kategori: 'lover',
+		vanskelighet: 2,
+		sporsmal: 'Hva krever småbåtloven av den som fører en fritidsbåt?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'At båten navigeres aktsomt, slik at det ikke oppstår fare for liv og helse, miljø eller materielle verdier'
+			},
+			{ id: 'b', tekst: 'At føreren alltid har papirkart om bord' },
+			{ id: 'c', tekst: 'At båten er registrert i småbåtregisteret' },
+			{ id: 'd', tekst: 'At det føres loggbok for hver tur' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Aktsomhetskravet er selve grunnregelen i småbåtloven: en fritidsbåt skal navigeres slik at det ikke oppstår fare for liv og helse, miljø eller materielle verdier. Loven inneholder i tillegg blant annet promillegrensen og påbudet om flyteutstyr.',
+		kilde: { verk: 'Småbåtloven', hjemmel: '§ 24', lenke: SMABATLOVEN },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'lo-009',
+		emne: 2,
+		pensumpunkt: '1.2.h',
+		underpunkt: 'Friluftsloven §§ 1–8',
+		kategori: 'lover',
+		vanskelighet: 3,
+		sporsmal: 'Du vil telte i en vik på en tur. Hva sier friluftsloven?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'I utmark kan du telte inntil to døgn, og ikke nærmere bebodd hus eller hytte enn 150 meter'
+			},
+			{ id: 'b', tekst: 'Du kan telte hvor som helst så lenge du rydder etter deg' },
+			{ id: 'c', tekst: 'Telting krever alltid grunneiers tillatelse' },
+			{ id: 'd', tekst: 'Du kan telte inntil en uke, 50 meter fra hus' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Allemannsretten gjelder i utmark, ikke i innmark som tun, hage og dyrket mark. Teltet skal ikke settes nærmere bebodd hus eller hytte enn 150 meter, og opphold utover to døgn krever grunneiers samtykke – unntatt i høyfjellet og langt fra bebyggelse.',
+		kilde: {
+			verk: 'Friluftsloven',
+			hjemmel: '§ 9',
+			lenke: 'https://lovdata.no/dokument/NL/lov/1957-06-28-16'
+		},
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'lo-010',
+		emne: 2,
+		pensumpunkt: '1.2.h',
+		underpunkt: 'Motorferdselloven',
+		kategori: 'lover',
+		vanskelighet: 3,
+		sporsmal: 'Hva er hovedregelen for motorferdsel på innsjøer og vassdrag?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Motorferdsel er i utgangspunktet forbudt, men er tillatt på innsjøer større enn 2 kvadratkilometer og i visse elvestrekninger'
+			},
+			{ id: 'b', tekst: 'Motorferdsel er fritt tillatt på alt ferskvann' },
+			{ id: 'c', tekst: 'Motorferdsel er forbudt på alt ferskvann uten unntak' },
+			{ id: 'd', tekst: 'Reglene gjelder bare for vannscootere' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Motorferdselloven snur utgangspunktet: i utmark og vassdrag er motorferdsel forbudt med mindre loven åpner for det. Unntaket gjelder innsjøer på minst 2 kvadratkilometer, elvestrekninger og mindre innsjøer som inngår i farbart vassdrag. Kommunen kan i tillegg begrense eller forby ferdselen.',
+		kilde: {
+			verk: 'Motorferdselloven',
+			hjemmel: '§ 3 og § 4',
+			lenke: 'https://lovdata.no/dokument/NL/lov/1977-06-10-82'
+		},
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'lo-011',
+		emne: 2,
+		pensumpunkt: '1.2.h',
+		underpunkt: 'Forskrift om fartsbegrensninger i sjøen',
+		kategori: 'lover',
+		vanskelighet: 2,
+		sporsmal: 'Hvem kan fastsette lokale fartsgrenser i sjøen der du ferdes?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Kommunen i sine sjøområder, og Kystverket i hoved- og bileder – så du må sjekke lokale regler'
+			},
+			{ id: 'b', tekst: 'Bare Sjøfartsdirektoratet, og grensene er like i hele landet' },
+			{ id: 'c', tekst: 'Bare politiet, og bare midlertidig' },
+			{ id: 'd', tekst: 'Ingen – det finnes bare den nasjonale 5-knopsregelen' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Ved siden av den statlige regelen om 5 knop nærmere enn 50 meter fra badende, fastsetter kommunene fartsgrenser i sine sjøområder og Kystverket i hoved- og bileder. Grensene varierer fra sted til sted, så sjekk kommunens kart eller oppslag før du gir gass i ukjent farvann.',
+		kilde: { verk: 'Forskrift om fartsgrenser på sjøen', hjemmel: '§ 2 og § 3', lenke: FARTSGRENSER },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'lo-012',
+		emne: 2,
+		pensumpunkt: '1.2.h',
+		underpunkt: 'Forskrift om flyteutstyr om bord på fritidsfartøy',
+		kategori: 'lover',
+		vanskelighet: 2,
+		sporsmal: 'Hvor mye flyteutstyr skal det være om bord i en fritidsbåt?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Egnet flyteutstyr til alle om bord, tilpasset den enkeltes vekt og størrelse'
+			},
+			{ id: 'b', tekst: 'Minst to vester, uansett hvor mange som er om bord' },
+			{ id: 'c', tekst: 'Bare til barn under 16 år' },
+			{ id: 'd', tekst: 'Bare når du går utenfor skjærgården' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Det skal alltid finnes egnet flyteutstyr til hver enkelt om bord, og det må passe personens vekt. En voksenvest holder ikke et barn flytende riktig. I båter under 8 meter skal utstyret i tillegg brukes av alle som oppholder seg utendørs mens båten er i fart.',
+		kilde: { verk: 'Småbåtloven', hjemmel: '§ 23 og § 23 a', lenke: SMABATLOVEN },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'na-017',
+		emne: 3,
+		pensumpunkt: '1.3.g',
+		underpunkt: null,
+		kategori: 'navigasjon',
+		vanskelighet: 3,
+		sporsmal: 'GPS-en viser posisjon N 59° 54,5\' Ø 010° 43,8\'. Hvordan finner du dette punktet i sjøkartet?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Måler bredden av på skalaen langs siden og lengden av på skalaen langs topp og bunn, og finner skjæringspunktet'
+			},
+			{ id: 'b', tekst: 'Måler begge verdiene på breddeskalaen langs siden' },
+			{ id: 'c', tekst: 'Måler begge verdiene på lengdeskalaen langs bunnen' },
+			{ id: 'd', tekst: 'Bruker kartets målestokk til å regne om til meter først' }
+		],
+		riktig: 'a',
+		forklaring:
+			'Bredden (N) leser du av på skalaen langs sidene, lengden (Ø) på skalaen langs topp og bunn. Der de to linjene krysser hverandre, er du. Merk at minuttene er oppgitt med desimaler, ikke sekunder – og kontroller at kartdatumet i GPS-en er det samme som i kartet, ellers kan posisjonen bomme med flere hundre meter.',
+		kilde: { verk: 'Pensum til båtførerprøven', hjemmel: 'Punkt 1.3.g', lenke: SDIR_BEVIS },
+		kontrollert: '2026-09-07'
+	},
+	{
+		id: 'na-018',
+		emne: 3,
+		pensumpunkt: '1.3.h',
+		underpunkt: null,
+		kategori: 'navigasjon',
+		vanskelighet: 3,
+		sporsmal: 'Du vil vite hvor du er ved hjelp av landemerker. Hva er den enkleste pålitelige metoden?',
+		illustrasjon: null,
+		alternativer: [
+			{
+				id: 'a',
+				tekst: 'Ta kompasspeiling mot to kjente landemerker og tegne peilelinjene i kartet – der de krysser, er du'
+			},
+			{ id: 'b', tekst: 'Peile ett landemerke og gjette avstanden' },
+			{ id: 'c', tekst: 'Se hvilket landemerke som er nærmest' },
+			{ id: 'd', tekst: 'Måle høyden på fjellet med linjal mot kartet' }
+		],
+		riktig: 'a',
+		forklaring:
+			'To peilinger gir et kryss som fastslår posisjonen din. Tre peilinger er bedre – da får du en liten trekant som viser hvor nøyaktig du har vært. Velg landemerker som ligger godt fra hverandre i retning; peiler du to punkter som ligger nesten i samme retning, blir krysset upresist.',
+		kilde: { verk: 'Pensum til båtførerprøven', hjemmel: 'Punkt 1.3.h', lenke: SDIR_BEVIS },
 		kontrollert: '2026-09-07'
 	}
 ];

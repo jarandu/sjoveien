@@ -83,8 +83,18 @@ for (const s of SPORSMAL) {
 const dekket = new Set(SPORSMAL.map((s) => s.pensumpunkt));
 const udekket = [...pensumpunkter].filter((p) => !dekket.has(p));
 
+// Dekning på underpunktnivå – kulepunktene i pensumlisten.
+const dekketUnder = new Set(
+	SPORSMAL.filter((s) => s.underpunkt).map((s) => `${s.pensumpunkt} :: ${s.underpunkt}`)
+);
+const udekketUnder = PUNKTER.flatMap((p) =>
+	p.under.filter((u) => !dekketUnder.has(`${p.kode} :: ${u}`)).map((u) => `${p.kode} ${u}`)
+);
+const antallUnder = PUNKTER.reduce((n, p) => n + p.under.length, 0);
+
 console.log(`Spørsmål: ${SPORSMAL.length}`);
 console.log(`Pensumpunkter dekket: ${dekket.size} av ${pensumpunkter.size}`);
+console.log(`Underpunkter dekket: ${antallUnder - udekketUnder.length} av ${antallUnder}`);
 
 for (const nivå of [1, 2, 3]) {
 	console.log(`  Nivå ${nivå}: ${SPORSMAL.filter((s) => s.vanskelighet === nivå).length}`);
@@ -96,6 +106,11 @@ for (const e of EMNER) {
 if (udekket.length) {
 	console.log(`\nPensumpunkter uten oppgaver (${udekket.length}):`);
 	console.log('  ' + udekket.join(', '));
+}
+
+if (udekketUnder.length) {
+	console.log(`\nUnderpunkter uten oppgaver (${udekketUnder.length}):`);
+	udekketUnder.forEach((u) => console.log('  - ' + u));
 }
 
 if (advarsler.length) {
