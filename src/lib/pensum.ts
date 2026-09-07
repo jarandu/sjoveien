@@ -15,7 +15,9 @@
  * pensumet spørsmålet hører hjemme.
  */
 
-export const EMNER = [
+import type { Emne, EmneDefinisjon, FlatPensumpunkt } from '$lib/typer.js';
+
+export const EMNER: EmneDefinisjon[] = [
 	{
 		nr: 1,
 		navn: 'Sjømannskap',
@@ -243,14 +245,16 @@ export const PROVE = {
 	antallEmne4: 13
 };
 
-export const emne = (nr) => EMNER.find((e) => e.nr === nr);
+export const emne = (nr: Emne | number | null): EmneDefinisjon | undefined =>
+	EMNER.find((e) => e.nr === nr);
 
 /** Flat oppslagstabell: pensumpunkt → { kode, tittel, under, emne } */
-export const PUNKTER = EMNER.flatMap((e) =>
+export const PUNKTER: FlatPensumpunkt[] = EMNER.flatMap((e) =>
 	Object.entries(e.punkter).map(([kode, p]) => ({ kode, ...p, emne: e.nr }))
 );
 
-export const punkt = (kode) => PUNKTER.find((p) => p.kode === kode);
+export const punkt = (kode: string | null): FlatPensumpunkt | undefined =>
+	PUNKTER.find((p) => p.kode === kode);
 
 /** Alle gyldige underpunkter, brukt av validatoren. */
-export const UNDERPUNKTER = new Set(PUNKTER.flatMap((p) => p.under));
+export const UNDERPUNKTER: Set<string> = new Set(PUNKTER.flatMap((p) => p.under));

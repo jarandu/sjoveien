@@ -11,7 +11,9 @@ npm install
 npm run dev
 ```
 
-`npm run build` kjører validatoren først og stopper hvis spørsmålsbanken har feil.
+Prosjektet er skrevet i TypeScript. `npm run check` kjører `svelte-check`
+med `strict` på, og `npm run build` kjører både validatoren og typesjekken
+før Vite bygger – begge stopper bygget ved feil.
 
 ## Deploy til Vercel
 
@@ -33,7 +35,7 @@ npx vercel --prod # produksjon
 
 ## Innhold og faktasjekk
 
-Spørsmålene ligger i `src/lib/data/sporsmal.js`. Hvert spørsmål har:
+Spørsmålene ligger i `src/lib/data/sporsmal.ts`, typet som `Sporsmal[]`. Hvert spørsmål har:
 
 | felt | hva det er |
 | --- | --- |
@@ -63,8 +65,10 @@ oppgavebank eller fra kursmateriell.
 ## Illustrasjoner
 
 `src/lib/illustrasjoner/` – ren SVG, tegnet i kode. Ingen genererte bilder.
+Hver komponent eksporterer sin egen props-type, så `/tegninger` og
+spørsmålsbanken ikke kan referere til varianter som ikke finnes.
 
-Stilkonsistensen er strukturell: `stil.js` eier alle farger, strektykkelser og
+Stilkonsistensen er strukturell: `stil.ts` eier alle farger, strektykkelser og
 proporsjoner, `Scene.svelte` eier lerret og bakgrunn, og ingen komponent har lov til å
 definere egne. Paletten er hentet fra norske sjøkart. En ny illustrasjon blir automatisk
 lik de andre.
@@ -74,15 +78,16 @@ lik de andre.
 ## Struktur
 
 ```
-src/lib/pensum.js          offisiell emneinndeling + prøvens format
-src/lib/data/sporsmal.js   spørsmålsbanken
-src/lib/quiz.js            trekking av sett, retting, eksamensregler
-src/lib/lagring.svelte.js  fremdrift i localStorage
+src/lib/typer.ts           domenetypene – Sporsmal, Emne, Kategori, Resultat
+src/lib/pensum.ts          offisiell emneinndeling + prøvens format
+src/lib/data/sporsmal.ts   spørsmålsbanken
+src/lib/quiz.ts            trekking av sett, retting, eksamensregler
+src/lib/lagring.svelte.ts  fremdrift i localStorage
 src/routes/ov              øving per emne eller pensumpunkt, umiddelbar retting
 src/routes/eksamen         50 spørsmål, 60 minutter, begge beståttkravene
 ```
 
-`pensum.js` speiler pensumlisten på tre nivåer: emne → pensumpunkt →
+`pensum.ts` speiler pensumlisten på tre nivåer: emne → pensumpunkt →
 underpunkt. Forsiden bygger kortene direkte på den strukturen, så nye
 pensumpunkter dukker opp av seg selv når de får oppgaver. `/ov` tar
 `?emne=`, `?punkt=`, `?kategori=` og `?niva=` som filter.

@@ -1,5 +1,6 @@
-<script>
+<script lang="ts">
 	import { onDestroy } from 'svelte';
+	import type { Besvarelse, Sporsmal } from '$lib/typer.js';
 	import { byggEksamen, vurder } from '$lib/quiz.js';
 	import { PROVE } from '$lib/pensum.js';
 	import { fremdrift } from '$lib/lagring.svelte.js';
@@ -7,13 +8,15 @@
 	import Fremdriftslinje from '$lib/ui/Fremdriftslinje.svelte';
 	import Knapp from '$lib/ui/Knapp.svelte';
 
-	let status = $state('klar'); // klar | pagar | levert
-	let okt = $state([]);
+	type Status = 'klar' | 'pagar' | 'levert';
+
+	let status = $state<Status>('klar');
+	let okt: Sporsmal[] = $state([]);
 	let indeks = $state(0);
-	let besvarelser = $state([]);
-	let valgt = $state(null);
+	let besvarelser: Besvarelse[] = $state([]);
+	let valgt: string | null = $state(null);
 	let sekunderIgjen = $state(PROVE.minutter * 60);
-	let klokke;
+	let klokke: ReturnType<typeof setInterval> | undefined;
 
 	const resultat = $derived(status === 'levert' ? vurder(besvarelser) : null);
 
@@ -87,7 +90,7 @@
 		/>
 	</div>
 	<Knapp variant="stille" onclick={lever}>Lever nå</Knapp>
-{:else}
+{:else if resultat}
 	<h1>{resultat.bestatt ? 'Bestått' : 'Ikke bestått'}</h1>
 	<dl>
 		<div><dt>Totalt</dt><dd class="tall">{resultat.riktige} / {resultat.totalt} · {resultat.prosent} %</dd></div>
@@ -107,7 +110,7 @@
 			<li>
 				<p class="sp">{b.sporsmal.sporsmal}</p>
 				<p class="sv">
-					Riktig svar: {b.sporsmal.alternativer.find((a) => a.id === b.sporsmal.riktig).tekst}
+					Riktig svar: {b.sporsmal.alternativer.find((a) => a.id === b.sporsmal.riktig)?.tekst}
 				</p>
 				<p class="fo">{b.sporsmal.forklaring}</p>
 			</li>

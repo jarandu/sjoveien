@@ -1,5 +1,13 @@
-<script>
-	let { href = null, tone = 'nokytral', children } = $props();
+<script lang="ts">
+	import type { Snippet } from 'svelte';
+
+	interface Props {
+		href?: string | null;
+		tone?: 'nøytral' | 'riktig' | 'feil';
+		children: Snippet;
+	}
+
+	let { href = null, tone = 'nøytral', children }: Props = $props();
 </script>
 
 {#if href}

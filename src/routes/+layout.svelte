@@ -1,7 +1,9 @@
-<script>
+<script lang="ts">
 	import '../app.css';
 	import { page } from '$app/state';
-	let { children } = $props();
+	import type { Snippet } from 'svelte';
+
+	let { children }: { children: Snippet } = $props();
 
 	const lenker = [
 		{ href: '/', tekst: 'Øv' },
@@ -13,7 +15,7 @@
 	 * Oppgavesidene beholder den smale lesespalten – lange linjer er tunge å
 	 * lese, og et spørsmål skal ligge rolig midt på skjermen.
 	 */
-	const VIDE = ['/', '/tegninger'];
+	const VIDE: string[] = ['/', '/tegninger'];
 	const vid = $derived(VIDE.includes(page.url.pathname));
 </script>
 

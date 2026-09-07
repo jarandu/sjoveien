@@ -1,12 +1,25 @@
-<script>
+<script lang="ts">
 	import Scene from './Scene.svelte';
 	import { STIL, LERRET } from './stil.js';
 
-	/**
-	 * IALA A – slik merkene ser ut i norsk farvann.
-	 * @type {{ merke: 'nord'|'sor'|'ost'|'vest'|'babord'|'styrbord'|'spesial'|'frittliggende'|'senterleie', tittel?: string }}
-	 */
-	let { merke, tittel = 'Sjømerke' } = $props();
+	/** IALA A – slik merkene ser ut i norsk farvann. */
+	export type Merke =
+		| 'nord'
+		| 'sor'
+		| 'ost'
+		| 'vest'
+		| 'babord'
+		| 'styrbord'
+		| 'spesial'
+		| 'frittliggende'
+		| 'senterleie';
+
+	interface Props {
+		merke: Merke;
+		tittel?: string;
+	}
+
+	let { merke, tittel = 'Sjømerke' }: Props = $props();
 
 	const X = LERRET.b / 2;
 	const TOPP = 96; // der selve merkelegemet starter
@@ -14,7 +27,7 @@
 	const BREDDE = 34;
 
 	// Fargebånd ovenfra og ned
-	const bandOppsett = {
+	const bandOppsett: Record<Merke, string[]> = {
 		nord: [STIL.svart, STIL.gul],
 		sor: [STIL.gul, STIL.svart],
 		ost: [STIL.svart, STIL.gul, STIL.svart],
@@ -30,7 +43,7 @@
 	const bandHoyde = $derived(band.length ? (BUNN - TOPP) / band.length : 0);
 
 	/** Kjegle. `opp` = spissen peker opp. */
-	function kjegle(yTopp, yBunn, opp) {
+	function kjegle(yTopp: number, yBunn: number, opp: boolean): string {
 		const b = 15;
 		return opp
 			? `${X},${yTopp} ${X - b},${yBunn} ${X + b},${yBunn}`

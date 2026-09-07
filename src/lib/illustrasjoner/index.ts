@@ -1,3 +1,4 @@
+import type { Component } from 'svelte';
 import Sjomerke from './Sjomerke.svelte';
 import Lanterne from './Lanterne.svelte';
 import Vikeplikt from './Vikeplikt.svelte';
@@ -9,7 +10,7 @@ import Lydsignal from './Lydsignal.svelte';
  * Da holder dataene seg rene, og valideringsskriptet kan sjekke at hver
  * referanse faktisk finnes her.
  */
-export const ILLUSTRASJONER = {
+export const ILLUSTRASJONER: Record<string, Component<any>> = {
 	sjomerke: Sjomerke,
 	lanterne: Lanterne,
 	vikeplikt: Vikeplikt,
@@ -17,4 +18,5 @@ export const ILLUSTRASJONER = {
 	lydsignal: Lydsignal
 };
 
-export const finnesIllustrasjon = (navn) => Object.hasOwn(ILLUSTRASJONER, navn);
+export const finnesIllustrasjon = (navn: string): boolean =>
+	Object.hasOwn(ILLUSTRASJONER, navn);

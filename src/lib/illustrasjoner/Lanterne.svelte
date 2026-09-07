@@ -1,18 +1,28 @@
-<script>
+<script lang="ts">
 	import Scene from './Scene.svelte';
 	import { STIL, LERRET } from './stil.js';
 
 	/**
 	 * Lanterneføring slik du ser den fra din egen båt om natten.
 	 * Sjøveisreglene regel 21–25.
-	 *
-	 * @type {{
-	 *   fartoy: 'motorbat'|'stor-motorbat'|'seilbat'|'robat',
-	 *   sett: 'forfra'|'aktenfra'|'babord'|'styrbord',
-	 *   tittel?: string
-	 * }}
 	 */
-	let { fartoy, sett, tittel = 'Lanterneføring sett fra din båt' } = $props();
+	export type Fartoy = 'motorbat' | 'stor-motorbat' | 'seilbat' | 'robat';
+	export type Sett = 'forfra' | 'aktenfra' | 'babord' | 'styrbord';
+
+	interface Lys {
+		x: number;
+		y: number;
+		farge: string;
+		r: number;
+	}
+
+	interface Props {
+		fartoy: Fartoy;
+		sett: Sett;
+		tittel?: string;
+	}
+
+	let { fartoy, sett, tittel = 'Lanterneføring sett fra din båt' }: Props = $props();
 
 	const M = LERRET.b / 2;
 	const DEKK = 150;
@@ -20,7 +30,7 @@
 	// Hvilke lanterner er synlige fra denne vinkelen?
 	// Sidelanterner lyser 112,5° fra rett forut. Akterlanternen 135° akterut.
 	// Rett fra siden ser du derfor sidelanterne, men ikke akterlanternen.
-	const lys = $derived.by(() => {
+	const lys: Lys[] = $derived.by(() => {
 		const topplanterne = { x: M, y: 92, farge: STIL.hvitLys, r: 6 };
 		const topplanterneAkter = { x: M + 34, y: 74, farge: STIL.hvitLys, r: 6 };
 		const akter = { x: M, y: DEKK - 6, farge: STIL.hvitLys, r: 6 };

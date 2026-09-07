@@ -1,12 +1,16 @@
-<script>
+<script lang="ts">
+	import type { Snippet } from 'svelte';
 	import { STIL, LERRET } from './stil.js';
 
-	let {
-		tittel,
-		natt = false,
-		horisont = 0.62,
-		children
-	} = $props();
+	interface Props {
+		tittel: string;
+		natt?: boolean;
+		/** Hvor på lerretet horisonten ligger, som andel av høyden. */
+		horisont?: number;
+		children?: Snippet;
+	}
+
+	let { tittel, natt = false, horisont = 0.62, children }: Props = $props();
 </script>
 
 <figure class="scene" class:natt>

@@ -1,4 +1,17 @@
-<script>
+<script lang="ts">
+	import type { Snippet } from 'svelte';
+
+	interface Props {
+		variant?: 'primar' | 'sekundar' | 'stille';
+		href?: string | null;
+		type?: 'button' | 'submit' | 'reset';
+		full?: boolean;
+		disabled?: boolean;
+		onclick?: (event: MouseEvent) => void;
+		children: Snippet;
+		[key: string]: unknown;
+	}
+
 	let {
 		variant = 'primar',
 		href = null,
@@ -8,7 +21,7 @@
 		onclick = undefined,
 		children,
 		...rest
-	} = $props();
+	}: Props = $props();
 </script>
 
 {#if href}

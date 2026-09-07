@@ -1,8 +1,9 @@
 import { SPORSMAL } from './data/sporsmal.js';
 import { PROVE } from './pensum.js';
+import type { Besvarelse, Filter, Resultat, Sporsmal } from './typer.js';
 
 /** Fisher–Yates. */
-export function stokk(liste) {
+export function stokk<T>(liste: readonly T[]): T[] {
 	const a = [...liste];
 	for (let i = a.length - 1; i > 0; i--) {
 		const j = Math.floor(Math.random() * (i + 1));
@@ -17,7 +18,7 @@ export function filtrer({
 	punkt = null,
 	underpunkt = null,
 	vanskelighet = null
-} = {}) {
+}: Filter = {}): Sporsmal[] {
 	return SPORSMAL.filter(
 		(s) =>
 			(kategori === null || s.kategori === kategori) &&
@@ -33,8 +34,8 @@ export function filtrer({
  * vanskelighetsnivå. Brukes av forsiden til å vise antall på hvert kort.
  * @returns {Map<string, number>}
  */
-export function tellPerPunkt(vanskelighet = null) {
-	const m = new Map();
+export function tellPerPunkt(vanskelighet: number | null = null): Map<string, number> {
+	const m = new Map<string, number>();
 	for (const s of SPORSMAL) {
 		if (vanskelighet !== null && s.vanskelighet !== vanskelighet) continue;
 		m.set(s.pensumpunkt, (m.get(s.pensumpunkt) ?? 0) + 1);
@@ -42,11 +43,11 @@ export function tellPerPunkt(vanskelighet = null) {
 	return m;
 }
 
-export function byggOkt(filter = {}, antall = 10) {
+export function byggOkt(filter: Filter = {}, antall = 10): Sporsmal[] {
 	return stokk(filtrer(filter)).slice(0, antall);
 }
 
-export function byggFeilliste(ider, antall = 10) {
+export function byggFeilliste(ider: readonly string[], antall = 10): Sporsmal[] {
 	const sett = new Set(ider);
 	return stokk(SPORSMAL.filter((s) => sett.has(s.id))).slice(0, antall);
 }
@@ -56,7 +57,7 @@ export function byggFeilliste(ider, antall = 10) {
  * emne 4 utgjør omtrent 13 av dem og vurderes separat. Vi speiler den
  * fordelingen så langt spørsmålsbanken rekker.
  */
-export function byggEksamen() {
+export function byggEksamen(): Sporsmal[] {
 	const emne4 = stokk(filtrer({ emne: 4 })).slice(0, PROVE.antallEmne4);
 	const brukte = new Set(emne4.map((s) => s.id));
 	const resten = stokk(SPORSMAL.filter((s) => !brukte.has(s.id))).slice(
@@ -66,8 +67,7 @@ export function byggEksamen() {
 	return stokk([...emne4, ...resten]);
 }
 
-/** @param {{sporsmal: any, valgt: string|null}[]} besvarelser */
-export function vurder(besvarelser) {
+export function vurder(besvarelser: readonly Besvarelse[]): Resultat {
 	const totalt = besvarelser.length;
 	const riktige = besvarelser.filter((b) => b.valgt === b.sporsmal.riktig).length;
 

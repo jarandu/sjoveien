@@ -1,5 +1,6 @@
-<script>
+<script lang="ts">
 	import { SvelteSet } from 'svelte/reactivity';
+	import type { Emne, Niva } from '$lib/typer.js';
 	import { NIVAER } from '$lib/data/kategorier.js';
 	import { EMNER, PROVE } from '$lib/pensum.js';
 	import { tellPerPunkt, antallISamlingen } from '$lib/quiz.js';
@@ -8,7 +9,7 @@
 	import Knapp from '$lib/ui/Knapp.svelte';
 	import Merkelapp from '$lib/ui/Merkelapp.svelte';
 
-	let niva = $state(null);
+	let niva: Niva | null = $state(null);
 
 	/**
 	 * Kortene følger pensumlisten: ett kort per emne, med emnets egne
@@ -26,7 +27,7 @@
 			.filter((e) => e.antall > 0)
 			// Emne 4 vektes tyngst på prøven og har egne beståttkrav, så det
 			// skal ligge først – ikke sist, slik nummereringen ellers tilsier.
-			.sort((a, b) => (b.nr === 4) - (a.nr === 4))
+			.sort((a, b) => Number(b.nr === 4) - Number(a.nr === 4))
 	);
 
 	const feil = $derived(fremdrift.feilliste.length);
@@ -37,14 +38,14 @@
 	 * like høye og hele rutenettet er lesbart uten å scrolle forbi et enkelt kort.
 	 */
 	const SYNLIGE = 6;
-	let utvidet = $state(new SvelteSet());
+	let utvidet = $state(new SvelteSet<number>());
 
-	function veksle(nr) {
+	function veksle(nr: Emne | number): void {
 		if (utvidet.has(nr)) utvidet.delete(nr);
 		else utvidet.add(nr);
 	}
 
-	function lenke(params) {
+	function lenke(params: Record<string, string>): string {
 		const p = new URLSearchParams(params);
 		if (niva) p.set('niva', String(niva));
 		return `/ov?${p}`;
@@ -87,7 +88,7 @@
 		</div>
 	</div>
 	{#if niva}
-		<p class="hint">{NIVAER.find((n) => n.nr === niva).beskrivelse}</p>
+		<p class="hint">{NIVAER.find((n) => n.nr === niva)?.beskrivelse}</p>
 	{/if}
 
 	<ul class="kort">

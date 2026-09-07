@@ -6,9 +6,9 @@
  * FEIL stopper bygget. ADVARSEL er ting en fagperson bør se på.
  */
 import { readFileSync } from 'node:fs';
-import { SPORSMAL } from '../src/lib/data/sporsmal.js';
-import { KATEGORIER } from '../src/lib/data/kategorier.js';
-import { EMNER, PUNKTER, punkt } from '../src/lib/pensum.js';
+import { SPORSMAL } from '../src/lib/data/sporsmal.ts';
+import { KATEGORIER } from '../src/lib/data/kategorier.ts';
+import { EMNER, PUNKTER, punkt } from '../src/lib/pensum.ts';
 
 const feil = [];
 const advarsler = [];
@@ -18,7 +18,7 @@ const pensumpunkter = new Set(PUNKTER.map((p) => p.kode));
 
 // Leser ut hvilke illustrasjoner som faktisk er registrert, uten å importere Svelte.
 const registryKilde = readFileSync(
-	new URL('../src/lib/illustrasjoner/index.js', import.meta.url),
+	new URL('../src/lib/illustrasjoner/index.ts', import.meta.url),
 	'utf8'
 );
 const registrerte = new Set(

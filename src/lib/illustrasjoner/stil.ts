@@ -36,7 +36,7 @@ export const STIL = {
 	// Typografi i tegninger
 	skrift: 12,
 	skriftFamilie: 'Archivo, system-ui, sans-serif'
-};
+} as const;
 
 /** Standard lerret. Alle scener bruker samme koordinatsystem. */
-export const LERRET = { b: 320, h: 210 };
+export const LERRET = { b: 320, h: 210 } as const;

@@ -3,7 +3,9 @@
  * terpe på ett tema om gangen. Hver kategori peker tilbake på emnet den
  * hører hjemme i, så eksamensfordelingen fortsatt blir riktig.
  */
-export const KATEGORIER = [
+import type { Kategori, KategoriId, NivaBeskrivelse } from '$lib/typer.js';
+
+export const KATEGORIER: Kategori[] = [
 	{ id: 'sjomerker', navn: 'Sjømerker', emne: 4 },
 	{ id: 'kartsymboler', navn: 'Kart og symboler', emne: 4 },
 	{ id: 'vikeplikt', navn: 'Vikeplikt', emne: 4 },
@@ -20,10 +22,11 @@ export const KATEGORIER = [
 	{ id: 'vaer', navn: 'Vær og sjøforhold', emne: 1 }
 ];
 
-export const NIVAER = [
+export const NIVAER: NivaBeskrivelse[] = [
 	{ nr: 1, navn: 'Grunnleggende', beskrivelse: 'Kan læres utenat. Kommer nesten alltid på prøven.' },
 	{ nr: 2, navn: 'Middels', beskrivelse: 'Krever at du forstår regelen, ikke bare husker den.' },
 	{ nr: 3, navn: 'Krevende', beskrivelse: 'Unntak, sammensatte situasjoner og regnestykker.' }
 ];
 
-export const kategori = (id) => KATEGORIER.find((k) => k.id === id);
+export const kategori = (id: KategoriId | string | null): Kategori | undefined =>
+	KATEGORIER.find((k) => k.id === id);

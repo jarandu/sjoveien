@@ -1,8 +1,19 @@
-<script>
+<script lang="ts">
+	import type { Sporsmal } from '$lib/typer.js';
 	import { ILLUSTRASJONER } from '$lib/illustrasjoner/index.js';
 	import { kategori } from '$lib/data/kategorier.js';
 	import Merkelapp from '$lib/ui/Merkelapp.svelte';
 	import Knapp from '$lib/ui/Knapp.svelte';
+
+	interface Props {
+		sporsmal: Sporsmal;
+		nummer: number;
+		antall: number;
+		/** Om fasit og forklaring vises straks du svarer. Av under prøven. */
+		visFasit?: boolean;
+		valgt?: string | null;
+		onneste: () => void;
+	}
 
 	let {
 		sporsmal,
@@ -11,7 +22,7 @@
 		visFasit = true,
 		valgt = $bindable(null),
 		onneste
-	} = $props();
+	}: Props = $props();
 
 	let laast = $state(false);
 
@@ -26,7 +37,7 @@
 		laast = false;
 	});
 
-	function velg(id) {
+	function velg(id: string): void {
 		if (laast) return;
 		valgt = id;
 		if (visFasit) laast = true;
@@ -47,7 +58,7 @@
 
 	{#if Illustrasjon}
 		<div class="bilde">
-			<Illustrasjon {...sporsmal.illustrasjon.props} />
+			<Illustrasjon {...sporsmal.illustrasjon?.props ?? {}} />
 		</div>
 	{/if}
 

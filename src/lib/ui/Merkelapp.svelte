@@ -1,5 +1,13 @@
-<script>
-	let { tekst, niva = null } = $props();
+<script lang="ts">
+	import type { Niva } from '$lib/typer.js';
+
+	interface Props {
+		tekst: string;
+		/** Farger lappen etter vanskelighetsgrad. */
+		niva?: Niva | null;
+	}
+
+	let { tekst, niva = null }: Props = $props();
 </script>
 
 <span class="merkelapp" style={niva ? `--f: var(--niva-${niva})` : ''} class:niva>{tekst}</span>

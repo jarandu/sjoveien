@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Scene from './Scene.svelte';
 	import { STIL, LERRET } from './stil.js';
 
@@ -7,15 +7,25 @@
 	 * lange støt blir synlig. Regel 32 definerer et kort støt som om lag ett
 	 * sekund og et langt støt som fire til seks sekunder.
 	 *
-	 * @type {{
-	 *   signal: 'ett-kort'|'to-korte'|'tre-korte'|'fem-korte'|'ett-langt'|'to-lange'|'langt-to-korte',
-	 *   tittel?: string
-	 * }}
 	 */
-	let { signal, tittel = 'Lydsignal' } = $props();
+	export type Signal =
+		| 'ett-kort'
+		| 'to-korte'
+		| 'tre-korte'
+		| 'fem-korte'
+		| 'ett-langt'
+		| 'to-lange'
+		| 'langt-to-korte';
+
+	interface Props {
+		signal: Signal;
+		tittel?: string;
+	}
+
+	let { signal, tittel = 'Lydsignal' }: Props = $props();
 
 	/** 1 = kort støt, 4 = langt støt. Tallene er sekunder. */
-	const MONSTRE = {
+	const MONSTRE: Record<Signal, number[]> = {
 		'ett-kort': [1],
 		'to-korte': [1, 1],
 		'tre-korte': [1, 1, 1],

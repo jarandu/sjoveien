@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Scene from './Scene.svelte';
 	import { STIL, LERRET } from './stil.js';
 
@@ -7,12 +7,21 @@
 	 * Som de andre illustrasjonene henter denne alt fra stil.js – ingen egne
 	 * farger eller strektykkelser.
 	 *
-	 * @type {{
-	 *   symbol: 'skvalpeskjaer'|'grunne'|'kabel'|'luftspenn'|'fyrsektor'|'dybdekurver',
-	 *   tittel?: string
-	 * }}
 	 */
-	let { symbol, tittel = 'Utsnitt av sjøkart' } = $props();
+	export type Kartsymboltype =
+		| 'skvalpeskjaer'
+		| 'grunne'
+		| 'kabel'
+		| 'luftspenn'
+		| 'fyrsektor'
+		| 'dybdekurver';
+
+	interface Props {
+		symbol: Kartsymboltype;
+		tittel?: string;
+	}
+
+	let { symbol, tittel = 'Utsnitt av sjøkart' }: Props = $props();
 
 	const M = LERRET.b / 2;
 	const H = LERRET.h / 2;

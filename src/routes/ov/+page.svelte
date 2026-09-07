@@ -1,5 +1,6 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/state';
+	import type { Besvarelse, Niva, Sporsmal } from '$lib/typer.js';
 	import { byggOkt, byggFeilliste, vurder } from '$lib/quiz.js';
 	import { kategori, NIVAER } from '$lib/data/kategorier.js';
 	import { emne as finnEmne, punkt as finnPunkt } from '$lib/pensum.js';
@@ -12,13 +13,13 @@
 	const katId = $derived(sp.get('kategori'));
 	const emneNr = $derived(Number(sp.get('emne')) || null);
 	const punktKode = $derived(sp.get('punkt'));
-	const niva = $derived(Number(sp.get('niva')) || null);
+	const niva = $derived((Number(sp.get('niva')) || null) as Niva | null);
 	const erFeilliste = $derived(sp.get('feilliste') === '1');
 
-	let okt = $state([]);
+	let okt: Sporsmal[] = $state([]);
 	let indeks = $state(0);
-	let besvarelser = $state([]);
-	let valgt = $state(null);
+	let besvarelser: Besvarelse[] = $state([]);
+	let valgt: string | null = $state(null);
 
 	const filter = $derived({
 		kategori: katId,
@@ -36,7 +37,8 @@
 			: emneNr
 				? (finnEmne(emneNr)?.navn ?? 'Blandede oppgaver')
 				: (kategori(katId)?.navn ?? 'Blandede oppgaver');
-		return grunn + (niva ? ' · ' + NIVAER.find((n) => n.nr === niva).navn : '');
+		const nivanavn = niva ? NIVAER.find((n) => n.nr === niva)?.navn : null;
+		return grunn + (nivanavn ? ' · ' + nivanavn : '');
 	});
 
 	/** Pensumpunktet vises som undertittel, så du vet hvor i pensum du er. */
@@ -62,7 +64,7 @@
 	const ferdig = $derived(okt.length > 0 && indeks >= okt.length);
 	const resultat = $derived(ferdig ? vurder(besvarelser) : null);
 
-	function neste() {
+	function neste(): void {
 		const sp = okt[indeks];
 		besvarelser = [...besvarelser, { sporsmal: sp, valgt }];
 		fremdrift.registrer(sp.id, valgt === sp.riktig);
@@ -70,7 +72,7 @@
 		indeks += 1;
 	}
 
-	function pånytt() {
+	function pånytt(): void {
 		okt = erFeilliste ? byggFeilliste(fremdrift.feilliste, 10) : byggOkt(filter, 10);
 		indeks = 0;
 		besvarelser = [];
@@ -88,7 +90,7 @@
 	<h1>Ingen oppgaver her ennå</h1>
 	<p>Prøv et annet tema eller en annen vanskelighetsgrad.</p>
 	<Knapp href="/" variant="sekundar">Velg tema</Knapp>
-{:else if ferdig}
+{:else if ferdig && resultat}
 	<h1 class="tall">{resultat.riktige} av {resultat.totalt}</h1>
 	<p>
 		{#if resultat.prosent >= 80}

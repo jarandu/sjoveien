@@ -10,21 +10,9 @@
  *  3. `kontrollert` er datoen noen sist leste kilden og bekreftet svaret.
  *     `npm run valider` rapporterer spørsmål som mangler kilde, lenke,
  *     eller som ikke er kontrollert de siste 12 månedene.
- *
- * @typedef {Object} Sporsmal
- * @property {string} id
- * @property {1|2|3|4} emne          Emne i Sjøfartsdirektoratets pensum
- * @property {string} pensumpunkt    F.eks. "1.4.3"
- * @property {string} kategori       Id fra kategorier.js
- * @property {1|2|3} vanskelighet
- * @property {string} sporsmal
- * @property {{navn: string, props: Object}|null} illustrasjon
- * @property {{id: string, tekst: string}[]} alternativer
- * @property {string} riktig
- * @property {string} forklaring
- * @property {{verk: string, hjemmel: string, lenke: string|null}} kilde
- * @property {string} kontrollert    ISO-dato
  */
+
+import type { Sporsmal } from '$lib/typer.js';
 
 const SJOVEISREGLENE = 'https://lovdata.no/dokument/SF/forskrift/1975-12-01-5';
 const SDIR_SJOVEIS = 'https://www.sdir.no/fritidsbat/regelverk-for-fritidsbat/sjoveisreglene/';
@@ -40,8 +28,7 @@ const SDIR_BRANN = 'https://www.sdir.no/fritidsbat/vis-sjovett/forebygging-av-ba
 /** Kystverket er myndighet for sjømerkingen langs norskekysten. */
 const KYSTVERKET_MERKER = 'https://www.kystverket.no/sjovegen/fyr-lykter-og-sjomerker/';
 
-/** @type {Sporsmal[]} */
-export const SPORSMAL = [
+export const SPORSMAL: Sporsmal[] = [
 	// ─── Sjømerker ──────────────────────────────────────────────────────────
 	{
 		id: 'sm-001',
@@ -1885,4 +1872,4 @@ export const SPORSMAL = [
 	}
 ];
 
-export const alleKategorier = () => [...new Set(SPORSMAL.map((s) => s.kategori))];
+export const alleKategorier = (): string[] => [...new Set(SPORSMAL.map((s) => s.kategori))];

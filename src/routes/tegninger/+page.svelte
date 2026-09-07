@@ -1,11 +1,17 @@
-<script>
+<script lang="ts">
 	import Sjomerke from '$lib/illustrasjoner/Sjomerke.svelte';
 	import Lanterne from '$lib/illustrasjoner/Lanterne.svelte';
 	import Vikeplikt from '$lib/illustrasjoner/Vikeplikt.svelte';
 	import Kartsymbol from '$lib/illustrasjoner/Kartsymbol.svelte';
 	import Lydsignal from '$lib/illustrasjoner/Lydsignal.svelte';
 
-	const merker = [
+	import type { Merke } from '$lib/illustrasjoner/Sjomerke.svelte';
+	import type { Fartoy, Sett } from '$lib/illustrasjoner/Lanterne.svelte';
+	import type { Situasjon, Annen } from '$lib/illustrasjoner/Vikeplikt.svelte';
+	import type { Kartsymboltype } from '$lib/illustrasjoner/Kartsymbol.svelte';
+	import type { Signal } from '$lib/illustrasjoner/Lydsignal.svelte';
+
+	const merker: [Merke, string][] = [
 		['nord', 'Nordkardinal'],
 		['sor', 'Sørkardinal'],
 		['ost', 'Østkardinal'],
@@ -17,7 +23,7 @@
 		['senterleie', 'Senterleiemerke']
 	];
 
-	const lanterner = [
+	const lanterner: [Fartoy, Sett, string][] = [
 		['motorbat', 'forfra', 'Motorbåt forfra'],
 		['stor-motorbat', 'forfra', 'Motorbåt over 50 m forfra'],
 		['seilbat', 'forfra', 'Seilbåt for seil, forfra'],
@@ -27,7 +33,7 @@
 		['robat', 'forfra', 'Robåt']
 	];
 
-	const situasjoner = [
+	const situasjoner: [Situasjon, Annen, string][] = [
 		['kryssende-fra-styrbord', 'motor', 'Kryssende fra styrbord'],
 		['kryssende-fra-babord', 'motor', 'Kryssende fra babord'],
 		['motsatte-kurser', 'motor', 'Motsatte kurser'],
@@ -35,7 +41,7 @@
 		['kryssende-fra-babord', 'nytte', 'Ferge i trangt farvann']
 	];
 
-	const kartsymboler = [
+	const kartsymboler: [Kartsymboltype, string][] = [
 		['skvalpeskjaer', 'Skvalpeskjær'],
 		['grunne', 'Grunne med dybdetall'],
 		['dybdekurver', 'Dybdekurver'],
@@ -44,7 +50,7 @@
 		['fyrsektor', 'Fyr med sektorer']
 	];
 
-	const lydsignaler = [
+	const lydsignaler: [Signal, string][] = [
 		['ett-kort', 'Ett kort – jeg dreier til styrbord'],
 		['to-korte', 'To korte – jeg dreier til babord'],
 		['tre-korte', 'Tre korte – maskinen går bakover'],

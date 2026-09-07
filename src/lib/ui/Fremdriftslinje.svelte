@@ -1,5 +1,12 @@
-<script>
-	let { verdi, av, merke = null } = $props();
+<script lang="ts">
+	interface Props {
+		verdi: number;
+		av: number;
+		/** Valgfri strek i sporet, f.eks. beståttgrensen. */
+		merke?: number | null;
+	}
+
+	let { verdi, av, merke = null }: Props = $props();
 	let andel = $derived(av ? Math.min(100, (verdi / av) * 100) : 0);
 </script>
 
