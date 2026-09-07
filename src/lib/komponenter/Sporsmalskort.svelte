@@ -56,13 +56,14 @@
 
 	<h2>{sporsmal.sporsmal}</h2>
 
-	{#if Illustrasjon}
-		<div class="bilde">
-			<Illustrasjon {...sporsmal.illustrasjon?.props ?? {}} />
-		</div>
-	{/if}
+	<div class="midt" class:medbilde={Illustrasjon}>
+		{#if Illustrasjon}
+			<div class="bilde">
+				<Illustrasjon {...sporsmal.illustrasjon?.props ?? {}} />
+			</div>
+		{/if}
 
-	<ul>
+		<ul>
 		{#each sporsmal.alternativer as alt}
 			{@const erRiktig = alt.id === sporsmal.riktig}
 			{@const erValgt = valgt === alt.id}
@@ -79,8 +80,9 @@
 					<span>{alt.tekst}</span>
 				</button>
 			</li>
-		{/each}
-	</ul>
+			{/each}
+		</ul>
+	</div>
 
 	{#if laast}
 		<div class="fasitboks" class:riktig={valgt === sporsmal.riktig}>
@@ -125,6 +127,18 @@
 	}
 	h2 {
 		font-size: var(--t-l);
+	}
+	/* På brede skjermer står tegningen ved siden av svarene, slik at begge
+	   deler er synlige samtidig uten å scrolle. */
+	.midt {
+		display: grid;
+		gap: var(--s4);
+	}
+	@media (min-width: 44rem) {
+		.midt.medbilde {
+			grid-template-columns: minmax(0, 20rem) 1fr;
+			align-items: start;
+		}
 	}
 	.bilde {
 		max-width: 22rem;

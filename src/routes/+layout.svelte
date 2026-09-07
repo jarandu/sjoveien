@@ -9,17 +9,9 @@
 		{ href: '/', tekst: 'Øv' },
 		{ href: '/eksamen', tekst: 'Prøve' }
 	];
-
-	/**
-	 * Sider som viser mange elementer ved siden av hverandre får full bredde.
-	 * Oppgavesidene beholder den smale lesespalten – lange linjer er tunge å
-	 * lese, og et spørsmål skal ligge rolig midt på skjermen.
-	 */
-	const VIDE: string[] = ['/', '/tegninger'];
-	const vid = $derived(VIDE.includes(page.url.pathname));
 </script>
 
-<div class="ramme" class:vid>
+<div class="ramme">
 	<header>
 		<a class="merke" href="/">
 			<svg viewBox="0 0 20 24" aria-hidden="true" width="16" height="19">
@@ -53,15 +45,6 @@
 		min-height: 100dvh;
 		display: flex;
 		flex-direction: column;
-	}
-	.ramme.vid {
-		max-width: var(--vid);
-	}
-	@media (min-width: 60rem) {
-		.ramme.vid {
-			padding-left: var(--s6);
-			padding-right: var(--s6);
-		}
 	}
 	header {
 		display: flex;

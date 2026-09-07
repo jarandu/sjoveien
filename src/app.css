@@ -60,11 +60,10 @@
 	--t-xxl: 2.25rem;
 
 	/* Bredde
-	 * --spalte er lesebredden for løpende tekst og oppgaver: smal med vilje,
-	 * fordi lange linjer er tunge å lese. --vid er for sider som viser mange
-	 * elementer ved siden av hverandre, der store skjermer skal utnyttes. */
-	--spalte: 34rem;
-	--vid: 78rem;
+	 * Én felles bredde for alle sider, så rammen ikke hopper når du navigerer.
+	 * 52rem gir plass til 2x2 med emnekortene på forsiden, og er samtidig
+	 * smalt nok til at brødtekst ikke blir uleselig lange linjer. */
+	--spalte: 52rem;
 }
 
 *,

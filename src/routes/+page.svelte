@@ -209,17 +209,21 @@
 		color: var(--blekk-dempet);
 	}
 
-	/* auto-fit fyller raden med så mange kort det er plass til, i stedet for å
-	   strekke et par kort over hele bredden. Fordi hvert kort viser like mange
-	   punkter før «vis mer», blir radene jevne. */
+	/* Fire emner i 2x2. Fordi hvert kort viser like mange punkter før
+	   «vis mer», blir de to radene omtrent like høye. */
 	.kort {
 		list-style: none;
 		margin: 0;
 		padding: 0;
 		display: grid;
 		gap: var(--s4);
-		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+		grid-template-columns: 1fr;
 		align-items: start;
+	}
+	@media (min-width: 40rem) {
+		.kort {
+			grid-template-columns: 1fr 1fr;
+		}
 	}
 	.kortet {
 		border: var(--kant);

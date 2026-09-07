@@ -95,6 +95,6 @@ underpunkt. Forsiden bygger kortene direkte på den strukturen, så nye
 pensumpunkter dukker opp av seg selv når de får oppgaver. `/ov` tar
 `?emne=`, `?punkt=`, `?kategori=` og `?niva=` som filter.
 
-Lesebredden (`--spalte`) og den vide bredden (`--vid`) er egne tokens:
-oppgavesider holder seg smale, mens forsiden og tegningssiden bruker hele
-skjermen.
+Alle sider deler samme bredde (`--spalte`), så rammen ikke hopper når du
+navigerer. Bredden er valgt slik at de fire emnekortene står 2x2 på
+forsiden, og oppgavesiden setter tegningen ved siden av svaralternativene.
