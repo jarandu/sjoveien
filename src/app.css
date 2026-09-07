@@ -8,6 +8,10 @@
  */
 
 :root {
+	/* Lar height-animasjoner gå til `auto` i stedet for en gjettet px-verdi.
+	   Browsere uten støtte faller tilbake til verdien satt i komponenten. */
+	interpolate-size: allow-keywords;
+
 	/* Flate */
 	--sjo: #dceef4;
 	--sjo-dyp: #ffffff;
