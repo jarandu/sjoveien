@@ -34,15 +34,44 @@
 
 	/**
 	 * Emnene har svært ulikt antall pensumpunkter – emne 1 har 17, emne 4 har 7.
-	 * Vi viser de ni første, slik at emne 2, 3 og 4 vises i sin helhet, og bare
-	 * det lengste emnet får en «vis mer»-knapp.
+	 * Punktlisten er derfor høydebegrenset i CSS. Vi måler etter opptegning om
+	 * innholdet faktisk er høyere enn taket, og viser «vis mer» bare da. Slik
+	 * styrer høyden knappen, i stedet for at vi gjetter på et antall punkter.
 	 */
-	const SYNLIGE = 9;
 	let utvidet = $state(new SvelteSet<number>());
+	let harMer = $state(new SvelteSet<number>());
 
 	function veksle(nr: Emne | number): void {
 		if (utvidet.has(nr)) utvidet.delete(nr);
 		else utvidet.add(nr);
+	}
+
+	/** Setter/fjerner emnet i `harMer` etter om lista renner over taket. */
+	function malOverflow(el: HTMLElement, nr: number) {
+		const sjekk = () => {
+			// Terskelen må være minst like stor som uttoningen i masken (2.5rem),
+			// ellers kan innhold bli maskert bort uten at knappen dukker opp.
+			const renner = el.scrollHeight - el.clientHeight > 40;
+			if (renner) harMer.add(nr);
+			else harMer.delete(nr);
+		};
+		sjekk();
+		// Observer både lista og radene i den: ytterboksen er låst til taket,
+		// så det er innholdet som endrer seg når filteret skifter.
+		const ro = new ResizeObserver(sjekk);
+		ro.observe(el);
+		for (const barn of el.children) ro.observe(barn);
+		const mo = new MutationObserver(() => {
+			sjekk();
+			for (const barn of el.children) ro.observe(barn);
+		});
+		mo.observe(el, { childList: true });
+		return {
+			destroy: () => {
+				ro.disconnect();
+				mo.disconnect();
+			}
+		};
 	}
 
 	function lenke(params: Record<string, string>): string {
@@ -94,8 +123,6 @@
 	<ul class="kort">
 		{#each emnekort as e}
 			{@const apen = utvidet.has(e.nr)}
-			{@const synlige = apen ? e.punkter : e.punkter.slice(0, SYNLIGE)}
-			{@const skjulte = e.punkter.length - synlige.length}
 			<li class="kortet" class:viktig={e.nr === 4}>
 				<div class="hode">
 					<h3>
@@ -108,8 +135,13 @@
 				</div>
 				<p class="kort-om">{e.kort}</p>
 
-				<ul class="punkter">
-					{#each synlige as p}
+				<ul
+					class="punkter"
+					class:apen
+					class:avkuttet={harMer.has(e.nr) && !apen}
+					use:malOverflow={e.nr}
+				>
+					{#each e.punkter as p}
 						<li>
 							<a href={lenke({ punkt: p.kode })}>
 								<span class="kode tall">{p.kode}</span>
@@ -120,9 +152,9 @@
 					{/each}
 				</ul>
 
-				{#if skjulte > 0 || apen}
+				{#if harMer.has(e.nr) || apen}
 					<button class="mer" aria-expanded={apen} onclick={() => veksle(e.nr)}>
-						{apen ? 'Vis færre' : `Vis ${skjulte} ${skjulte === 1 ? 'punkt' : 'punkter'} til`}
+						{apen ? 'Vis færre' : 'Vis alle punkter'}
 						<span class="pil" aria-hidden="true">{apen ? '↑' : '↓'}</span>
 					</button>
 				{/if}
@@ -303,11 +335,22 @@
 		font-size: var(--t-s);
 		color: var(--blekk-dempet);
 	}
+	/* Kortene har svært ulikt antall punkter. I stedet for å telle punkter
+	   begrenser vi høyden, og lar kortet utvide seg når du ber om det. */
 	.punkter {
 		list-style: none;
 		margin: var(--s2) 0 0;
 		padding: 0;
 		border-top: var(--kant);
+		max-height: 21rem;
+		overflow: hidden;
+	}
+	/* Toner ut nederst, men bare når det faktisk ligger mer bak knappen. */
+	.punkter.avkuttet {
+		mask-image: linear-gradient(to bottom, #000 calc(100% - 2.5rem), transparent);
+	}
+	.punkter.apen {
+		max-height: none;
 	}
 	.punkter a {
 		display: grid;
