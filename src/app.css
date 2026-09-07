@@ -1,0 +1,132 @@
+/*
+ * Designtokens. Alt visuelt i appen refererer til disse variablene –
+ * ingen komponent skal skrive en rå hex-verdi eller en løs px-verdi.
+ *
+ * Paletten er lånt fra norske sjøkart: sandfarget land, lys blå grunne,
+ * magenta for lykter og faresymboler. Rødt og grønt betyr det samme her
+ * som på sjøen – babord og styrbord – og brukes derfor også for feil/riktig.
+ */
+
+:root {
+	/* Flate */
+	--sjo: #dceef4;
+	--sjo-dyp: #ffffff;
+	--grunne: #b9e2f0;
+	--land: #ede0be;
+	--papir: #f7f9fa;
+	--natt: #0b2430;
+
+	/* Blekk */
+	--blekk: #10242e;
+	--blekk-dempet: #45606c;
+	--blekk-svak: #93aab3;
+	--linje: #cbdbe1;
+
+	/* Signal */
+	--babord: #d0021b;
+	--babord-flate: #fbe7e9;
+	--styrbord: #0e8a4b;
+	--styrbord-flate: #e3f3ea;
+	--gul: #f5c518;
+	--magenta: #b5177a;
+
+	/* Vanskelighetsgrad */
+	--niva-1: #0e8a4b;
+	--niva-2: #c98a00;
+	--niva-3: #b5177a;
+
+	/* Rytme */
+	--s1: 0.25rem;
+	--s2: 0.5rem;
+	--s3: 0.75rem;
+	--s4: 1rem;
+	--s5: 1.5rem;
+	--s6: 2rem;
+	--s7: 3rem;
+
+	/* Form */
+	--radius: 3px;
+	--radius-stor: 6px;
+	--kant: 1px solid var(--linje);
+	--kant-tydelig: 2px solid var(--blekk);
+
+	/* Type */
+	--skrift: 'Archivo', system-ui, -apple-system, sans-serif;
+	--t-xs: 0.75rem;
+	--t-s: 0.875rem;
+	--t-m: 1rem;
+	--t-l: 1.25rem;
+	--t-xl: 1.625rem;
+	--t-xxl: 2.25rem;
+
+	/* Bredde
+	 * --spalte er lesebredden for løpende tekst og oppgaver: smal med vilje,
+	 * fordi lange linjer er tunge å lese. --vid er for sider som viser mange
+	 * elementer ved siden av hverandre, der store skjermer skal utnyttes. */
+	--spalte: 34rem;
+	--vid: 78rem;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	background: var(--papir);
+	color: var(--blekk);
+	font-family: var(--skrift);
+	font-size: var(--t-m);
+	line-height: 1.55;
+}
+
+h1,
+h2,
+h3 {
+	margin: 0;
+	line-height: 1.15;
+	letter-spacing: -0.015em;
+	font-weight: 600;
+	text-wrap: balance;
+}
+
+h1 {
+	font-size: var(--t-xxl);
+}
+h2 {
+	font-size: var(--t-l);
+}
+
+p {
+	margin: 0 0 var(--s3);
+	max-width: 68ch;
+}
+
+a {
+	color: inherit;
+	text-underline-offset: 3px;
+}
+
+:focus-visible {
+	outline: 2px solid var(--magenta);
+	outline-offset: 2px;
+}
+
+.tall {
+	font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		transition-duration: 0.01ms !important;
+	}
+}
